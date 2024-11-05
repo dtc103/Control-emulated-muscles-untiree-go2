@@ -20,7 +20,7 @@ class MuscleModel:
 
         self.phi_min = (
             torch.ones(
-                (nenvironments, 8),
+                (nenvironments, 12),
                 dtype=torch.float32,
                 device=self.device,
                 requires_grad=False,
@@ -29,7 +29,7 @@ class MuscleModel:
         )
         self.phi_max = (
             torch.ones(
-                (nenvironments, 8),
+                (nenvironments, 12),
                 dtype=torch.float32,
                 device=self.device,
                 requires_grad=False,
@@ -61,13 +61,13 @@ class MuscleModel:
             requires_grad=False,
         )
         self.lce_1_tensor = torch.zeros(
-            (self.nenvironments, 8),
+            (self.nenvironments, 12),
             dtype=torch.float32,
             device=self.device,
             requires_grad=False,
         )
         self.lce_2_tensor = torch.zeros(
-            (self.nenvironments, 8),
+            (self.nenvironments, 12),
             dtype=torch.float32,
             device=self.device,
             requires_grad=False,
@@ -76,55 +76,56 @@ class MuscleModel:
 
         # TODO: remove some exceptions and automaticly set required options
         self.episode_steps = 0
-        self.eps_counter = 2
-        self.total_plot_counter = 0
-        self.storedata = options.STORE_DATA
-        if self.storedata:
-            self.datastorage = DataStorage(muscle_params, options)
-        self.writeToCSV = options.WRITE_MUSCLE_DATA_TO_CSV
-        if self.writeToCSV:
-            if not self.storedata:
-                raise Exception("Data storing is required in order to be able to save data into csv")
-            self.writer = csv.writer(open("100-zeroactions.csv", "w", newline=""))
-        self.visualize_muscle_relations = options.VISUALIZATION_MUSCLE_RELATION
-        self.visualize_joint_characteristics = options.VISUALIZATION_JOINT_CHARACTERISTICS
-        self.validation_experiment_muscle_actuator_range = options.VALIDATION_EXPERIMENT_MUSCLE_ACTUATOR_RANGE
-        self.validation_experiment_muscle_action_change = options.VALIDATION_EXPERIMENT_MUSCLE_ACTION_CHANGE
-        if self.validation_experiment_muscle_actuator_range and self.validation_experiment_muscle_action_change:
-            raise Exception("Can't use both validation experiments for muscles at the same time")
-        if self.validation_experiment_muscle_actuator_range or self.validation_experiment_muscle_action_change:
-            if not self.storedata or not self.visualize_muscle_relations:
-                raise Exception("Validation experiment requires data storage option and muscle relation visualization")
+        #self.eps_counter = 2
+        #self.total_plot_counter = 0
+        #self.storedata = options.STORE_DATA
+        #if self.storedata:
+            #self.datastorage = DataStorage(muscle_params, options)
+        #self.writeToCSV = options.WRITE_MUSCLE_DATA_TO_CSV
+        # if self.writeToCSV:
+        #     if not self.storedata:
+        #         raise Exception("Data storing is required in order to be able to save data into csv")
+        #     self.writer = csv.writer(open("100-zeroactions.csv", "w", newline=""))
+        # self.visualize_muscle_relations = options.VISUALIZATION_MUSCLE_RELATION
+        # self.visualize_joint_characteristics = options.VISUALIZATION_JOINT_CHARACTERISTICS
+        # self.validation_experiment_muscle_actuator_range = options.VALIDATION_EXPERIMENT_MUSCLE_ACTUATOR_RANGE
+        # self.validation_experiment_muscle_action_change = options.VALIDATION_EXPERIMENT_MUSCLE_ACTION_CHANGE
+        # if self.validation_experiment_muscle_actuator_range and self.validation_experiment_muscle_action_change:
+        #     raise Exception("Can't use both validation experiments for muscles at the same time")
+        # if self.validation_experiment_muscle_actuator_range or self.validation_experiment_muscle_action_change:
+        #     if not self.storedata or not self.visualize_muscle_relations:
+        #         raise Exception("Validation experiment requires data storage option and muscle relation visualization")
 
     def analyse_muscle(self):
         # TODO: call for analyse function can be activated using configuration file not muscle usage
         # TODO: define properly plotting for defined time step of episodes interval
 
         # creates plots for muscle validation analysis
-        if self.storedata:
-            # plot each episode (24 steps -> 24 calls of analyse_muscle function)
-            if self.episode_steps == 24:
-                if self.visualize_muscle_relations:
-                    fig, axs = plt.subplots(7, 2, figsize=(38, 32))
-                    # fig, axs = plt.subplots(6, 2)
-                    # fig.tight_layout()
-                    self.datastorage.plot_muscle_relations(axs, self.eps_counter, self.episode_steps)
+        # if self.storedata:
+        #     # plot each episode (24 steps -> 24 calls of analyse_muscle function)
+        #     if self.episode_steps == 24:
+        #         if self.visualize_muscle_relations:
+        #             fig, axs = plt.subplots(7, 2, figsize=(38, 32))
+        #             # fig, axs = plt.subplots(6, 2)
+        #             # fig.tight_layout()
+        #             self.datastorage.plot_muscle_relations(axs, self.eps_counter, self.episode_steps)
 
-                if self.visualize_joint_characteristics:
-                    num_joints = 2
-                    fig, axs = plt.subplots(num_joints, 3, figsize=(16, 10))
-                    fig.suptitle("Joint characteristics", fontsize=16)
-                    self.datastorage.plot_joint_characteristics(axs, num_joints)
+        #         if self.visualize_joint_characteristics:
+        #             num_joints = 2
+        #             fig, axs = plt.subplots(num_joints, 3, figsize=(16, 10))
+        #             fig.suptitle("Joint characteristics", fontsize=16)
+        #             self.datastorage.plot_joint_characteristics(axs, num_joints)
 
-                if self.total_plot_counter == 10:
-                    self.storedata = False
-                    self.visualize_muscle_relations = False
-                    self.visualize_joint_characteristics = False
+        #         if self.total_plot_counter == 10:
+        #             self.storedata = False
+        #             self.visualize_muscle_relations = False
+        #             self.visualize_joint_characteristics = False
 
-                self.episode_steps = 0
-                self.total_plot_counter += 1
-                self.eps_counter += 1
-            self.episode_steps += 1
+        #         self.episode_steps = 0
+        #         self.total_plot_counter += 1
+        #         self.eps_counter += 1
+        #     self.episode_steps += 1
+        pass
 
     def FL(self, lce: torch.Tensor) -> torch.Tensor:
         """
@@ -340,40 +341,40 @@ class MuscleModel:
         F = torch.mul(self.force_tensor, self.peak_force)
         torque = F * self.moment
 
-        if self.storedata:
-            self.datastorage.FL_1 = np.append(self.datastorage.FL_1, FL[:, 1].tolist()[0])
-            self.datastorage.FL_2 = np.append(self.datastorage.FL_2, FL[:, 9].tolist()[0])
-            self.datastorage.FV_1 = np.append(self.datastorage.FV_1, FV[:, 1].tolist()[0])
-            self.datastorage.FV_2 = np.append(self.datastorage.FV_2, FV[:, 9].tolist()[0])
-            self.datastorage.FP_1 = np.append(self.datastorage.FP_1, FP[:, 1].tolist()[0])
-            self.datastorage.FP_2 = np.append(self.datastorage.FP_2, FP[:, 9].tolist()[0])
+        # if self.storedata:
+        #     self.datastorage.FL_1 = np.append(self.datastorage.FL_1, FL[:, 1].tolist()[0])
+        #     self.datastorage.FL_2 = np.append(self.datastorage.FL_2, FL[:, 9].tolist()[0])
+        #     self.datastorage.FV_1 = np.append(self.datastorage.FV_1, FV[:, 1].tolist()[0])
+        #     self.datastorage.FV_2 = np.append(self.datastorage.FV_2, FV[:, 9].tolist()[0])
+        #     self.datastorage.FP_1 = np.append(self.datastorage.FP_1, FP[:, 1].tolist()[0])
+        #     self.datastorage.FP_2 = np.append(self.datastorage.FP_2, FP[:, 9].tolist()[0])
 
-            self.datastorage.LCE_1 = np.append(self.datastorage.LCE_1, self.lce_tensor[:, 1].tolist()[0])
-            self.datastorage.LCE_2 = np.append(self.datastorage.LCE_2, self.lce_tensor[:, 9].tolist()[0])
-            self.datastorage.LCE_DOT_1 = np.append(self.datastorage.LCE_DOT_1, lce_dot[:, 1].tolist()[0])
-            self.datastorage.LCE_DOT_2 = np.append(self.datastorage.LCE_DOT_2, lce_dot[:, 9].tolist()[0])
+        #     self.datastorage.LCE_1 = np.append(self.datastorage.LCE_1, self.lce_tensor[:, 1].tolist()[0])
+        #     self.datastorage.LCE_2 = np.append(self.datastorage.LCE_2, self.lce_tensor[:, 9].tolist()[0])
+        #     self.datastorage.LCE_DOT_1 = np.append(self.datastorage.LCE_DOT_1, lce_dot[:, 1].tolist()[0])
+        #     self.datastorage.LCE_DOT_2 = np.append(self.datastorage.LCE_DOT_2, lce_dot[:, 9].tolist()[0])
 
-            self.datastorage.activations1 = np.append(self.datastorage.activations1, self.activation_tensor[:, 1].tolist()[0])
-            self.datastorage.activations2 = np.append(self.datastorage.activations2, self.activation_tensor[:, 9].tolist()[0])
-            self.datastorage.actions1 = np.append(self.datastorage.actions1, actions[:, 1].tolist()[0])
-            self.datastorage.actions2 = np.append(self.datastorage.actions2, actions[:, 9].tolist()[0])
+        #     self.datastorage.activations1 = np.append(self.datastorage.activations1, self.activation_tensor[:, 1].tolist()[0])
+        #     self.datastorage.activations2 = np.append(self.datastorage.activations2, self.activation_tensor[:, 9].tolist()[0])
+        #     self.datastorage.actions1 = np.append(self.datastorage.actions1, actions[:, 1].tolist()[0])
+        #     self.datastorage.actions2 = np.append(self.datastorage.actions2, actions[:, 9].tolist()[0])
 
-            if self.writeToCSV:
-                self.writer.writerow(
-                    [
-                        actuator_vel.tolist()[0][0],
-                        FL[:, 0].tolist()[0],
-                        FL[:, 8].tolist()[0],
-                        FV[:, 0].tolist()[0],
-                        FV[:, 8].tolist()[0],
-                        FP[:, 0].tolist()[0],
-                        FP[:, 8].tolist()[0],
-                        self.lce_tensor[:, 0].tolist()[0],
-                        self.lce_tensor[:, 8].tolist()[0],
-                        lce_dot[:, 0].tolist()[0],
-                        lce_dot[:, 8].tolist()[0],
-                    ]
-                )
+        #     if self.writeToCSV:
+        #         self.writer.writerow(
+        #             [
+        #                 actuator_vel.tolist()[0][0],
+        #                 FL[:, 0].tolist()[0],
+        #                 FL[:, 8].tolist()[0],
+        #                 FV[:, 0].tolist()[0],
+        #                 FV[:, 8].tolist()[0],
+        #                 FP[:, 0].tolist()[0],
+        #                 FP[:, 8].tolist()[0],
+        #                 self.lce_tensor[:, 0].tolist()[0],
+        #                 self.lce_tensor[:, 8].tolist()[0],
+        #                 lce_dot[:, 0].tolist()[0],
+        #                 lce_dot[:, 8].tolist()[0],
+        #             ]
+        #         )
 
         return torch.sum(
             torch.reshape(torque, (self.nenvironments, 2, self.nactioncount // 2)),
@@ -384,12 +385,12 @@ class MuscleModel:
         """
         actuator_pos: Current position of actuator
         """
-        if self.validation_experiment_muscle_actuator_range:
-            (
-                actions,
-                actuator_pos,
-                actuator_vel,
-            ) = self.datastorage.visualize_muscle_actuator_ranges(actions, actuator_pos)
+        # if self.validation_experiment_muscle_actuator_range:
+        #     (
+        #         actions,
+        #         actuator_pos,
+        #         actuator_vel,
+        #     ) = self.datastorage.visualize_muscle_actuator_ranges(actions, actuator_pos)
 
         with torch.torch.no_grad():
             actions = torch.clip(actions, 0, 1)

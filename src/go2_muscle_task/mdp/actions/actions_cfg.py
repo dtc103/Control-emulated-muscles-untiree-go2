@@ -13,4 +13,3 @@ class MuscleJointActionCfg(ActionTermCfg):
     preserve_order: bool = False
     
     class_type = joint_actions.MuscleJointAction
-    use_default_offset = True

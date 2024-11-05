@@ -8,25 +8,36 @@ import omni.isaac.lab.utils.string as string_utils
 from omni.isaac.lab.assets.articulation import Articulation
 from omni.isaac.lab.managers.action_manager import ActionTerm
 from omni.isaac.lab.envs.mdp.actions import JointAction
-from muscle_model import MuscleModel
+from go2_muscle_task.actuators.muscle_model import MuscleModel
 
 if TYPE_CHECKING:
     from omni.isaac.lab.envs import ManagerBasedEnv
     from . import actions_cfg
 
 class MuscleJointAction(JointAction):
-    def __init__(self, cfg, env, muscle_params, options):
+    def __init__(self, cfg, env):
         super().__init__(cfg, env)
+
+        muscle_params = {
+            "l_min":0.24,
+            "l_max":1.53,
+            "fvmax": 1.38,
+            "fpmax": 1.76,
+            "lce_min": 0.74,
+            "lce_max": 0.94,
+            "phi_min": -3.14,
+            "phi_max": 3.14,
+            #TODO pierre wegen parameter fragen
+            "eps": 0.0
+        }
+
         self.muscles = MuscleModel(muscle_params=muscle_params,
                                    action_tensor=self._processed_actions, 
                                    nenvironments=self.num_envs, 
-                                   options=options)
+                                   options=None)
 
     def apply_actions(self):
-        ### TODO APPLY MUSCLE MODEL HERE
-
-        self.muscles.compute_torques(self._asset._joint_pos_target_sim, self._asset._joint_vel_target_sim)
-        ##########
+        self.muscles.compute_torques(self._asset.data.joint_pos, self._asset.data.joint_acc)
         self._asset.set_joint_effort_target(self.processed_actions, joint_ids=self._joint_ids)
 
     @property
