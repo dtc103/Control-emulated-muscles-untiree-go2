@@ -8,22 +8,25 @@ from omni.isaac.lab_tasks.utils.wrappers.rsl_rl import (
 
 @configclass
 class Go2MuscleRunnerCfg(RslRlOnPolicyRunnerCfg):
+    num_steps_per_env = 24
     max_iterations = 300
+    save_interval = 50
     experiment_name = "unitree_go2_muscle"
+    empirical_normalization = False
     policy=RslRlPpoActorCriticCfg(
         init_noise_std=1.0,
-        actor_hidden_dims = [128, 128, 128],
-        critic_hidden_dims = [128, 128, 128],
+        actor_hidden_dims = [512, 265, 128],
+        critic_hidden_dims = [512, 265, 128],
         activation="elu"
     )
     algorithm=RslRlPpoAlgorithmCfg(
         value_loss_coef=1.0,
         use_clipped_value_loss=True,
-        clip_param=0.2,
+        clip_param=1.0,
         entropy_coef=0.01,
         num_learning_epochs=5,
         num_mini_batches=4,
-        learning_rate=1.0e-3,
+        learning_rate=1.0e-2,
         schedule="adaptive",
         gamma=0.99,
         lam=0.95,

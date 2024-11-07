@@ -19,16 +19,17 @@ class MuscleJointAction(JointAction):
         super().__init__(cfg, env)
 
         muscle_params = {
-            "l_min":0.24,
-            "l_max":1.53,
+            "lmin":0.24,
+            "lmax":1.53,
             "fvmax": 1.38,
             "fpmax": 1.76,
             "lce_min": 0.74,
             "lce_max": 0.94,
             "phi_min": -3.14,
             "phi_max": 3.14,
-            #TODO pierre wegen parameter fragen
-            "eps": 0.0
+            "vmax": 30.0, # TODO pierre fragen, ob das das ricthige ist (taken from unitre.py UNITREE_GO2_CFG)
+            "peak_force": 45.0,
+            "eps": 10e-5 # eps is just a smal number for numerical purpouses
         }
 
         self.muscles = MuscleModel(muscle_params=muscle_params,
@@ -37,8 +38,8 @@ class MuscleJointAction(JointAction):
                                    options=None)
 
     def apply_actions(self):
-        self.muscles.compute_torques(self._asset.data.joint_pos, self._asset.data.joint_acc)
-        self._asset.set_joint_effort_target(self.processed_actions, joint_ids=self._joint_ids)
+        torques = self.muscles.compute_torques(self._asset.data.joint_pos, self._asset.data.joint_vel, self._processed_actions)
+        self._asset.set_joint_effort_target(torques, joint_ids=self._joint_ids)
 
     @property
     def action_dim(self):

@@ -12,7 +12,7 @@ torch.set_default_dtype(torch.float32)
 class MuscleModel:
     def __init__(self, muscle_params, action_tensor, nenvironments, options):
         self.device = "cuda"
-        self.nactioncount = 16
+        self.nactioncount = 24
         self.nenvironments = nenvironments
 
         for k, v in muscle_params.items():
@@ -189,6 +189,7 @@ class MuscleModel:
         velocity = lce_dot
 
         eff_vel = torch.div(velocity, self.vmax)
+
         c_result = torch.zeros_like(
             eff_vel,
             dtype=torch.float32,
@@ -336,7 +337,6 @@ class MuscleModel:
         FP = self.FP(lce_tensor)
 
         self.force_tensor = torch.add(torch.mul(torch.mul(FL, FV), self.activation_tensor), FP)
-        # peak foce will always be the same for solo8/12 and does not need a check if the value was set correctly in .xml of mujoco
         # peak_force = self.get_peak_force(actuator_velocity)
         F = torch.mul(self.force_tensor, self.peak_force)
         torque = F * self.moment
@@ -404,11 +404,11 @@ class MuscleModel:
             # compute moments
             moment = self.compute_moment(actions, actuator_vel, self.lce_1_tensor, self.lce_2_tensor)
 
-            if self.validation_experiment_muscle_action_change:
-                moment = self.datastorage.visualize_max_dof_pos(moment)
+            # if self.validation_experiment_muscle_action_change:
+            #     moment = self.datastorage.visualize_max_dof_pos(moment)
 
-            if self.storedata:
-                self.datastorage.joint_positions.append(actuator_pos.tolist()[0])
-                self.datastorage.joint_velocities.append(actuator_vel.tolist()[0])
-                self.datastorage.joint_torques.append(moment.tolist()[0])
+            # if self.storedata:
+            #     self.datastorage.joint_positions.append(actuator_pos.tolist()[0])
+            #     self.datastorage.joint_velocities.append(actuator_vel.tolist()[0])
+            #     self.datastorage.joint_torques.append(moment.tolist()[0])
             return moment
