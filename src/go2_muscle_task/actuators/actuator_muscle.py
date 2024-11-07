@@ -1,16 +1,15 @@
-import csv
+import torch
 
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-
-#from legged_gym.utils.muscle_validation import DataStorage
 
 torch.set_default_dtype(torch.float32)
 
 
 class MuscleModel:
     def __init__(self, muscle_params, action_tensor, nenvironments, options):
+        super().__init__
         self.device = "cuda"
         self.nactioncount = 24
         self.nenvironments = nenvironments
@@ -381,7 +380,7 @@ class MuscleModel:
             axis=-2,
         )
 
-    def compute_torques(self, actuator_pos, actuator_vel, actions):
+    def compute_torques(self, actuator_pos, actuator_vel, actions: torch.Tensor):
         """
         actuator_pos: Current position of actuator
         """
@@ -391,6 +390,8 @@ class MuscleModel:
         #         actuator_pos,
         #         actuator_vel,
         #     ) = self.datastorage.visualize_muscle_actuator_ranges(actions, actuator_pos)
+
+        #actions = torch.Tensor([1.0]).repeat(24).to(actions.device)
 
         with torch.torch.no_grad():
             actions = torch.clip(actions, 0, 1)
@@ -411,4 +412,5 @@ class MuscleModel:
             #     self.datastorage.joint_positions.append(actuator_pos.tolist()[0])
             #     self.datastorage.joint_velocities.append(actuator_vel.tolist()[0])
             #     self.datastorage.joint_torques.append(moment.tolist()[0])
+            #moment = torch.Tensor([0.0]).repeat(12).unsqueeze(0).to(actions.device)
             return moment

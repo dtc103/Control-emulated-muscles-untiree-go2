@@ -8,7 +8,7 @@ import omni.isaac.lab.utils.string as string_utils
 from omni.isaac.lab.assets.articulation import Articulation
 from omni.isaac.lab.managers.action_manager import ActionTerm
 from omni.isaac.lab.envs.mdp.actions import JointAction
-from go2_muscle_task.actuators.muscle_model import MuscleModel
+from go2_muscle_task.actuators.actuator_muscle import MuscleModel
 
 if TYPE_CHECKING:
     from omni.isaac.lab.envs import ManagerBasedEnv
@@ -39,6 +39,7 @@ class MuscleJointAction(JointAction):
 
     def apply_actions(self):
         torques = self.muscles.compute_torques(self._asset.data.joint_pos, self._asset.data.joint_vel, self._processed_actions)
+        print(torques)
         self._asset.set_joint_effort_target(torques, joint_ids=self._joint_ids)
 
     @property

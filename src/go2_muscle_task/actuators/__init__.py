@@ -1,1 +1,3 @@
-from .muscle_model import *
+from .forward_effort_actuator_cfg import ForwardEffortActuatorCfg
+from .forward_effort_actuator import FowardEffortActuator
+from .actuator_muscle import MuscleModel
