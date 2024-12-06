@@ -1,10 +1,12 @@
 from omni.isaac.lab.actuators import ActuatorBase
 
 from omni.isaac.lab.utils import configclass
-from omni.isaac.lab.actuators import ActuatorBaseCfg
+
 from typing import TYPE_CHECKING
 
-
+if TYPE_CHECKING:
+    from .forward_effort_actuator_cfg import ForwardEffortActuatorCfg
+    from omni.isaac.lab.actuators import ActuatorBaseCfg
 
 
 class FowardEffortActuator(ActuatorBase):
@@ -24,7 +26,3 @@ class FowardEffortActuator(ActuatorBase):
         
         control_action.joint_efforts = self.applied_effort
         return control_action
-
-@configclass
-class ForwardEffortActuatorCfg(ActuatorBaseCfg):
-    class_type = FowardEffortActuator

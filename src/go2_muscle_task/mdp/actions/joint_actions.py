@@ -19,27 +19,31 @@ class MuscleJointAction(JointAction):
         super().__init__(cfg, env)
 
         muscle_params = {
-            "lmin":0.24,
-            "lmax":1.53,
-            "fvmax": 1.38,
-            "fpmax": 1.76,
-            "lce_min": 0.74,
-            "lce_max": 0.94,
-            "phi_min": -3.14,
-            "phi_max": 3.14,
+            "lmin":0.2,
+            "lmax":2.0,
+            "fvmax": 2,
+            "fpmax": 2,
+            "lce_min": 0.3,
+            "lce_max": 1.5,
+            "phi_min": -torch.pi * (3/4),
+            "phi_max": torch.pi * (3/4),
             "vmax": 30.0, # TODO pierre fragen, ob das das ricthige ist (taken from unitre.py UNITREE_GO2_CFG)
             "peak_force": 45.0,
             "eps": 10e-5 # eps is just a smal number for numerical purpouses
         }
 
         self.muscles = MuscleModel(muscle_params=muscle_params,
-                                   action_tensor=self._processed_actions, 
-                                   nenvironments=self.num_envs, 
-                                   options=None)
+                                    action_tensor=self._processed_actions, 
+                                    nenvironments=self.num_envs, 
+                                    options=None)
 
     def apply_actions(self):
         torques = self.muscles.compute_torques(self._asset.data.joint_pos, self._asset.data.joint_vel, self._processed_actions)
-        print(torques)
+        
+        #print("applied actions", torch.zeros_like(self._processed_actions))
+        #torques = self.muscles.compute_torques(self._asset.data.joint_pos, self._asset.data.joint_vel, torch.zeros_like(self._processed_actions))
+
+        #print("resulting torques", torques)
         self._asset.set_joint_effort_target(torques, joint_ids=self._joint_ids)
 
     @property

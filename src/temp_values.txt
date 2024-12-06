@@ -1,0 +1,2153 @@
+Debug value function:
+value_batch range: 1.1297 to 1.6667
+returns_batch range: 1.1443 to 1.6689
+target_values_batch range: 1.4140 to 1.6660
+Debug value function:
+value_batch range: 1.3492 to 1.6678
+returns_batch range: 1.1465 to 1.6695
+target_values_batch range: 1.4993 to 1.6662
+Debug value function:
+value_batch range: 1.2784 to 1.6664
+returns_batch range: 1.1565 to 1.6692
+target_values_batch range: 1.4789 to 1.6652
+Debug value function:
+value_batch range: 1.1104 to 1.6668
+returns_batch range: 1.1332 to 1.6690
+target_values_batch range: 1.3997 to 1.6655
+Debug value function:
+value_batch range: 1.1371 to 1.6671
+returns_batch range: 1.2431 to 1.6696
+target_values_batch range: 1.4221 to 1.6654
+Debug value function:
+value_batch range: 1.2536 to 1.6675
+returns_batch range: 1.3257 to 1.6684
+target_values_batch range: 1.4297 to 1.6655
+Debug value function:
+value_batch range: 1.2173 to 1.6673
+returns_batch range: 1.1471 to 1.6688
+target_values_batch range: 1.4449 to 1.6661
+Debug value function:
+value_batch range: 1.5469 to 1.6677
+returns_batch range: 1.5273 to 1.6699
+target_values_batch range: 1.5422 to 1.6662
+Debug value function:
+value_batch range: 1.3435 to 1.6690
+returns_batch range: 1.1483 to 1.6698
+target_values_batch range: 1.5036 to 1.6657
+Debug value function:
+value_batch range: 1.2646 to 1.6679
+returns_batch range: 1.1444 to 1.6699
+target_values_batch range: 1.4371 to 1.6649
+################################################################################
+                       Learning iteration 416/500                       
+
+                       Computation: 251998 steps/s (collection: 0.341s, learning 0.136s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0013
+             Mean action noise std: 0.20
+                       Mean reward: 16.30
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0536
+         Episode_Reward/dof_acc_l2: -0.0062
+     Episode_Reward/action_rate_l2: -0.0816
+     Episode_Reward/dof_pos_limits: -0.0087
+          Episode_Reward/joint_pos: 0.9660
+Metrics/pose_command/error_joint_angles: 85.1338
+      Episode_Termination/time_out: 4.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 50040000
+                    Iteration time: 0.48s
+                        Total time: 194.48s
+                               ETA: 39.2s
+
+Debug value function:
+value_batch range: 0.6414 to 1.6664
+returns_batch range: -0.0080 to 1.6707
+target_values_batch range: 0.6414 to 1.6664
+Debug value function:
+value_batch range: 1.0940 to 1.6671
+returns_batch range: -0.0407 to 1.6704
+target_values_batch range: 1.1017 to 1.6672
+Debug value function:
+value_batch range: 0.6599 to 1.6673
+returns_batch range: 0.0230 to 1.6690
+target_values_batch range: 0.6858 to 1.6677
+Debug value function:
+value_batch range: 0.5865 to 1.6662
+returns_batch range: -0.0210 to 1.6693
+target_values_batch range: 0.6363 to 1.6670
+Debug value function:
+value_batch range: 0.5942 to 1.6658
+returns_batch range: 0.1404 to 1.6694
+target_values_batch range: 0.7355 to 1.6666
+Debug value function:
+value_batch range: 0.8307 to 1.6656
+returns_batch range: -0.0131 to 1.6687
+target_values_batch range: 1.0678 to 1.6668
+Debug value function:
+value_batch range: -0.1575 to 1.6675
+returns_batch range: -0.0141 to 1.6701
+target_values_batch range: 0.4732 to 1.6678
+Debug value function:
+value_batch range: -0.0266 to 1.6677
+returns_batch range: -0.0276 to 1.6689
+target_values_batch range: 0.6564 to 1.6678
+Debug value function:
+value_batch range: 1.5492 to 1.6673
+returns_batch range: 1.5420 to 1.6702
+target_values_batch range: 1.5500 to 1.6661
+Debug value function:
+value_batch range: -0.4092 to 1.6678
+returns_batch range: 0.3298 to 1.6704
+target_values_batch range: 0.5806 to 1.6685
+Debug value function:
+value_batch range: -0.3237 to 1.6665
+returns_batch range: -0.0080 to 1.6707
+target_values_batch range: 0.6414 to 1.6664
+Debug value function:
+value_batch range: -0.0035 to 1.6657
+returns_batch range: -0.0407 to 1.6704
+target_values_batch range: 1.1017 to 1.6672
+Debug value function:
+value_batch range: -0.1605 to 1.6661
+returns_batch range: 0.0230 to 1.6690
+target_values_batch range: 0.6858 to 1.6677
+Debug value function:
+value_batch range: -0.1384 to 1.6666
+returns_batch range: -0.0210 to 1.6693
+target_values_batch range: 0.6363 to 1.6670
+Debug value function:
+value_batch range: 0.0887 to 1.6652
+returns_batch range: 0.1404 to 1.6694
+target_values_batch range: 0.7355 to 1.6666
+Debug value function:
+value_batch range: 0.5295 to 1.6652
+returns_batch range: -0.0131 to 1.6687
+target_values_batch range: 1.0678 to 1.6668
+Debug value function:
+value_batch range: -0.1694 to 1.6649
+returns_batch range: -0.0141 to 1.6701
+target_values_batch range: 0.4732 to 1.6678
+Debug value function:
+value_batch range: 0.0769 to 1.6650
+returns_batch range: -0.0276 to 1.6689
+target_values_batch range: 0.6564 to 1.6678
+Debug value function:
+value_batch range: 1.5466 to 1.6656
+returns_batch range: 1.5420 to 1.6702
+target_values_batch range: 1.5500 to 1.6661
+Debug value function:
+value_batch range: 0.4044 to 1.6659
+returns_batch range: 0.3298 to 1.6704
+target_values_batch range: 0.5806 to 1.6685
+Debug value function:
+value_batch range: 0.0664 to 1.6653
+returns_batch range: -0.0080 to 1.6707
+target_values_batch range: 0.6414 to 1.6664
+Debug value function:
+value_batch range: 0.1726 to 1.6657
+returns_batch range: -0.0407 to 1.6704
+target_values_batch range: 1.1017 to 1.6672
+Debug value function:
+value_batch range: 0.0224 to 1.6653
+returns_batch range: 0.0230 to 1.6690
+target_values_batch range: 0.6858 to 1.6677
+Debug value function:
+value_batch range: -0.0549 to 1.6658
+returns_batch range: -0.0210 to 1.6693
+target_values_batch range: 0.6363 to 1.6670
+Debug value function:
+value_batch range: 0.1691 to 1.6654
+returns_batch range: 0.1404 to 1.6694
+target_values_batch range: 0.7355 to 1.6666
+Debug value function:
+value_batch range: 0.5401 to 1.6665
+returns_batch range: -0.0131 to 1.6687
+target_values_batch range: 1.0678 to 1.6668
+Debug value function:
+value_batch range: -0.1888 to 1.6663
+returns_batch range: -0.0141 to 1.6701
+target_values_batch range: 0.4732 to 1.6678
+Debug value function:
+value_batch range: 0.0779 to 1.6655
+returns_batch range: -0.0276 to 1.6689
+target_values_batch range: 0.6564 to 1.6678
+Debug value function:
+value_batch range: 1.5477 to 1.6655
+returns_batch range: 1.5420 to 1.6702
+target_values_batch range: 1.5500 to 1.6661
+Debug value function:
+value_batch range: 0.4051 to 1.6660
+returns_batch range: 0.3298 to 1.6704
+target_values_batch range: 0.5806 to 1.6685
+Debug value function:
+value_batch range: 0.0606 to 1.6645
+returns_batch range: -0.0080 to 1.6707
+target_values_batch range: 0.6414 to 1.6664
+Debug value function:
+value_batch range: 0.1732 to 1.6655
+returns_batch range: -0.0407 to 1.6704
+target_values_batch range: 1.1017 to 1.6672
+Debug value function:
+value_batch range: 0.0241 to 1.6653
+returns_batch range: 0.0230 to 1.6690
+target_values_batch range: 0.6858 to 1.6677
+Debug value function:
+value_batch range: -0.0501 to 1.6657
+returns_batch range: -0.0210 to 1.6693
+target_values_batch range: 0.6363 to 1.6670
+Debug value function:
+value_batch range: 0.1745 to 1.6652
+returns_batch range: 0.1404 to 1.6694
+target_values_batch range: 0.7355 to 1.6666
+Debug value function:
+value_batch range: 0.5389 to 1.6664
+returns_batch range: -0.0131 to 1.6687
+target_values_batch range: 1.0678 to 1.6668
+Debug value function:
+value_batch range: -0.1899 to 1.6663
+returns_batch range: -0.0141 to 1.6701
+target_values_batch range: 0.4732 to 1.6678
+Debug value function:
+value_batch range: 0.0825 to 1.6655
+returns_batch range: -0.0276 to 1.6689
+target_values_batch range: 0.6564 to 1.6678
+Debug value function:
+value_batch range: 1.5484 to 1.6655
+returns_batch range: 1.5420 to 1.6702
+target_values_batch range: 1.5500 to 1.6661
+Debug value function:
+value_batch range: 0.4034 to 1.6660
+returns_batch range: 0.3298 to 1.6704
+target_values_batch range: 0.5806 to 1.6685
+Debug value function:
+value_batch range: 0.0600 to 1.6646
+returns_batch range: -0.0080 to 1.6707
+target_values_batch range: 0.6414 to 1.6664
+Debug value function:
+value_batch range: 0.1757 to 1.6655
+returns_batch range: -0.0407 to 1.6704
+target_values_batch range: 1.1017 to 1.6672
+Debug value function:
+value_batch range: 0.0260 to 1.6653
+returns_batch range: 0.0230 to 1.6690
+target_values_batch range: 0.6858 to 1.6677
+Debug value function:
+value_batch range: -0.0472 to 1.6657
+returns_batch range: -0.0210 to 1.6693
+target_values_batch range: 0.6363 to 1.6670
+Debug value function:
+value_batch range: 0.1754 to 1.6653
+returns_batch range: 0.1404 to 1.6694
+target_values_batch range: 0.7355 to 1.6666
+Debug value function:
+value_batch range: 0.5379 to 1.6664
+returns_batch range: -0.0131 to 1.6687
+target_values_batch range: 1.0678 to 1.6668
+Debug value function:
+value_batch range: -0.1907 to 1.6663
+returns_batch range: -0.0141 to 1.6701
+target_values_batch range: 0.4732 to 1.6678
+Debug value function:
+value_batch range: 0.0847 to 1.6655
+returns_batch range: -0.0276 to 1.6689
+target_values_batch range: 0.6564 to 1.6678
+Debug value function:
+value_batch range: 1.5485 to 1.6655
+returns_batch range: 1.5420 to 1.6702
+target_values_batch range: 1.5500 to 1.6661
+Debug value function:
+value_batch range: 0.4005 to 1.6660
+returns_batch range: 0.3298 to 1.6704
+target_values_batch range: 0.5806 to 1.6685
+Debug value function:
+value_batch range: 0.0601 to 1.6646
+returns_batch range: -0.0080 to 1.6707
+target_values_batch range: 0.6414 to 1.6664
+Debug value function:
+value_batch range: 0.1777 to 1.6654
+returns_batch range: -0.0407 to 1.6704
+target_values_batch range: 1.1017 to 1.6672
+Debug value function:
+value_batch range: 0.0278 to 1.6654
+returns_batch range: 0.0230 to 1.6690
+target_values_batch range: 0.6858 to 1.6677
+Debug value function:
+value_batch range: -0.0453 to 1.6656
+returns_batch range: -0.0210 to 1.6693
+target_values_batch range: 0.6363 to 1.6670
+Debug value function:
+value_batch range: 0.1749 to 1.6653
+returns_batch range: 0.1404 to 1.6694
+target_values_batch range: 0.7355 to 1.6666
+Debug value function:
+value_batch range: 0.5366 to 1.6663
+returns_batch range: -0.0131 to 1.6687
+target_values_batch range: 1.0678 to 1.6668
+Debug value function:
+value_batch range: -0.1905 to 1.6661
+returns_batch range: -0.0141 to 1.6701
+target_values_batch range: 0.4732 to 1.6678
+Debug value function:
+value_batch range: 0.0858 to 1.6654
+returns_batch range: -0.0276 to 1.6689
+target_values_batch range: 0.6564 to 1.6678
+Debug value function:
+value_batch range: 1.5485 to 1.6655
+returns_batch range: 1.5420 to 1.6702
+target_values_batch range: 1.5500 to 1.6661
+Debug value function:
+value_batch range: 0.3974 to 1.6660
+returns_batch range: 0.3298 to 1.6704
+target_values_batch range: 0.5806 to 1.6685
+################################################################################
+                       Learning iteration 417/500                       
+
+                       Computation: 258835 steps/s (collection: 0.327s, learning 0.137s)
+               Value function loss: 0.0001
+                    Surrogate loss: 0.0039
+             Mean action noise std: 0.21
+                       Mean reward: 16.29
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0533
+         Episode_Reward/dof_acc_l2: -0.0062
+     Episode_Reward/action_rate_l2: -0.0816
+     Episode_Reward/dof_pos_limits: -0.0089
+          Episode_Reward/joint_pos: 0.9648
+Metrics/pose_command/error_joint_angles: 85.1833
+      Episode_Termination/time_out: 4.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 50160000
+                    Iteration time: 0.46s
+                        Total time: 194.95s
+                               ETA: 38.7s
+
+Debug value function:
+value_batch range: -5.1324 to 1.6659
+returns_batch range: -19.1134 to 1.6674
+target_values_batch range: -5.1324 to 1.6659
+Debug value function:
+value_batch range: -6.1086 to 1.6665
+returns_batch range: -19.1073 to 1.6672
+target_values_batch range: -6.0731 to 1.6665
+Debug value function:
+value_batch range: -4.7938 to 1.6650
+returns_batch range: -18.9547 to 1.6686
+target_values_batch range: -4.6889 to 1.6648
+Debug value function:
+value_batch range: -3.4937 to 1.6646
+returns_batch range: -17.7827 to 1.6675
+target_values_batch range: -3.2735 to 1.6646
+Debug value function:
+value_batch range: 1.5053 to 1.6663
+returns_batch range: 1.5261 to 1.6666
+target_values_batch range: 1.5075 to 1.6659
+Debug value function:
+value_batch range: -7.9374 to 1.6655
+returns_batch range: -18.5100 to 1.6680
+target_values_batch range: -7.0759 to 1.6660
+Debug value function:
+value_batch range: -11.5820 to 1.6646
+returns_batch range: -18.7554 to 1.6667
+target_values_batch range: -9.9316 to 1.6658
+Debug value function:
+value_batch range: -11.5900 to 1.6628
+returns_batch range: -18.1811 to 1.6680
+target_values_batch range: -9.3178 to 1.6659
+Debug value function:
+value_batch range: -11.6316 to 1.6605
+returns_batch range: -19.1756 to 1.6660
+target_values_batch range: -8.8683 to 1.6655
+Debug value function:
+value_batch range: -9.2287 to 1.6616
+returns_batch range: -18.8755 to 1.6667
+target_values_batch range: -6.5497 to 1.6657
+Debug value function:
+value_batch range: -7.8718 to 1.6636
+returns_batch range: -19.1134 to 1.6674
+target_values_batch range: -5.1324 to 1.6659
+Debug value function:
+value_batch range: -9.4241 to 1.6661
+returns_batch range: -19.1073 to 1.6672
+target_values_batch range: -6.0731 to 1.6665
+Debug value function:
+value_batch range: -7.8552 to 1.6654
+returns_batch range: -18.9547 to 1.6686
+target_values_batch range: -4.6889 to 1.6648
+Debug value function:
+value_batch range: -6.2157 to 1.6643
+returns_batch range: -17.7827 to 1.6675
+target_values_batch range: -3.2735 to 1.6646
+Debug value function:
+value_batch range: 1.4897 to 1.6625
+returns_batch range: 1.5261 to 1.6666
+target_values_batch range: 1.5075 to 1.6659
+Debug value function:
+value_batch range: -11.8418 to 1.6614
+returns_batch range: -18.5100 to 1.6680
+target_values_batch range: -7.0759 to 1.6660
+Debug value function:
+value_batch range: -16.2657 to 1.6621
+returns_batch range: -18.7554 to 1.6667
+target_values_batch range: -9.9316 to 1.6658
+Debug value function:
+value_batch range: -14.9213 to 1.6612
+returns_batch range: -18.1811 to 1.6680
+target_values_batch range: -9.3178 to 1.6659
+Debug value function:
+value_batch range: -13.9741 to 1.6604
+returns_batch range: -19.1756 to 1.6660
+target_values_batch range: -8.8683 to 1.6655
+Debug value function:
+value_batch range: -10.5382 to 1.6611
+returns_batch range: -18.8755 to 1.6667
+target_values_batch range: -6.5497 to 1.6657
+Debug value function:
+value_batch range: -8.6010 to 1.6613
+returns_batch range: -19.1134 to 1.6674
+target_values_batch range: -5.1324 to 1.6659
+Debug value function:
+value_batch range: -9.8161 to 1.6623
+returns_batch range: -19.1073 to 1.6672
+target_values_batch range: -6.0731 to 1.6665
+Debug value function:
+value_batch range: -7.9156 to 1.6617
+returns_batch range: -18.9547 to 1.6686
+target_values_batch range: -4.6889 to 1.6648
+Debug value function:
+value_batch range: -6.0976 to 1.6625
+returns_batch range: -17.7827 to 1.6675
+target_values_batch range: -3.2735 to 1.6646
+Debug value function:
+value_batch range: 1.4996 to 1.6630
+returns_batch range: 1.5261 to 1.6666
+target_values_batch range: 1.5075 to 1.6659
+Debug value function:
+value_batch range: -11.0772 to 1.6631
+returns_batch range: -18.5100 to 1.6680
+target_values_batch range: -7.0759 to 1.6660
+Debug value function:
+value_batch range: -15.0526 to 1.6637
+returns_batch range: -18.7554 to 1.6667
+target_values_batch range: -9.9316 to 1.6658
+Debug value function:
+value_batch range: -14.1730 to 1.6632
+returns_batch range: -18.1811 to 1.6680
+target_values_batch range: -9.3178 to 1.6659
+Debug value function:
+value_batch range: -13.4603 to 1.6625
+returns_batch range: -19.1756 to 1.6660
+target_values_batch range: -8.8683 to 1.6655
+Debug value function:
+value_batch range: -10.2092 to 1.6627
+returns_batch range: -18.8755 to 1.6667
+target_values_batch range: -6.5497 to 1.6657
+Debug value function:
+value_batch range: -8.3528 to 1.6627
+returns_batch range: -19.1134 to 1.6674
+target_values_batch range: -5.1324 to 1.6659
+Debug value function:
+value_batch range: -9.5585 to 1.6640
+returns_batch range: -19.1073 to 1.6672
+target_values_batch range: -6.0731 to 1.6665
+Debug value function:
+value_batch range: -7.6947 to 1.6625
+returns_batch range: -18.9547 to 1.6686
+target_values_batch range: -4.6889 to 1.6648
+Debug value function:
+value_batch range: -5.9239 to 1.6630
+returns_batch range: -17.7827 to 1.6675
+target_values_batch range: -3.2735 to 1.6646
+Debug value function:
+value_batch range: 1.5017 to 1.6637
+returns_batch range: 1.5261 to 1.6666
+target_values_batch range: 1.5075 to 1.6659
+Debug value function:
+value_batch range: -10.7907 to 1.6635
+returns_batch range: -18.5100 to 1.6680
+target_values_batch range: -7.0759 to 1.6660
+Debug value function:
+value_batch range: -14.6781 to 1.6638
+returns_batch range: -18.7554 to 1.6667
+target_values_batch range: -9.9316 to 1.6658
+Debug value function:
+value_batch range: -13.8296 to 1.6630
+returns_batch range: -18.1811 to 1.6680
+target_values_batch range: -9.3178 to 1.6659
+Debug value function:
+value_batch range: -13.1345 to 1.6626
+returns_batch range: -19.1756 to 1.6660
+target_values_batch range: -8.8683 to 1.6655
+Debug value function:
+value_batch range: -9.9482 to 1.6626
+returns_batch range: -18.8755 to 1.6667
+target_values_batch range: -6.5497 to 1.6657
+Debug value function:
+value_batch range: -8.1319 to 1.6622
+returns_batch range: -19.1134 to 1.6674
+target_values_batch range: -5.1324 to 1.6659
+Debug value function:
+value_batch range: -9.3197 to 1.6637
+returns_batch range: -19.1073 to 1.6672
+target_values_batch range: -6.0731 to 1.6665
+Debug value function:
+value_batch range: -7.4928 to 1.6619
+returns_batch range: -18.9547 to 1.6686
+target_values_batch range: -4.6889 to 1.6648
+Debug value function:
+value_batch range: -5.7664 to 1.6624
+returns_batch range: -17.7827 to 1.6675
+target_values_batch range: -3.2735 to 1.6646
+Debug value function:
+value_batch range: 1.5025 to 1.6633
+returns_batch range: 1.5261 to 1.6666
+target_values_batch range: 1.5075 to 1.6659
+Debug value function:
+value_batch range: -10.5386 to 1.6629
+returns_batch range: -18.5100 to 1.6680
+target_values_batch range: -7.0759 to 1.6660
+Debug value function:
+value_batch range: -14.3583 to 1.6634
+returns_batch range: -18.7554 to 1.6667
+target_values_batch range: -9.9316 to 1.6658
+Debug value function:
+value_batch range: -13.5281 to 1.6627
+returns_batch range: -18.1811 to 1.6680
+target_values_batch range: -9.3178 to 1.6659
+Debug value function:
+value_batch range: -12.8551 to 1.6624
+returns_batch range: -19.1756 to 1.6660
+target_values_batch range: -8.8683 to 1.6655
+Debug value function:
+value_batch range: -9.7286 to 1.6626
+returns_batch range: -18.8755 to 1.6667
+target_values_batch range: -6.5497 to 1.6657
+Debug value function:
+value_batch range: -7.9439 to 1.6622
+returns_batch range: -19.1134 to 1.6674
+target_values_batch range: -5.1324 to 1.6659
+Debug value function:
+value_batch range: -9.1204 to 1.6638
+returns_batch range: -19.1073 to 1.6672
+target_values_batch range: -6.0731 to 1.6665
+Debug value function:
+value_batch range: -7.3222 to 1.6621
+returns_batch range: -18.9547 to 1.6686
+target_values_batch range: -4.6889 to 1.6648
+Debug value function:
+value_batch range: -5.6365 to 1.6626
+returns_batch range: -17.7827 to 1.6675
+target_values_batch range: -3.2735 to 1.6646
+Debug value function:
+value_batch range: 1.5035 to 1.6636
+returns_batch range: 1.5261 to 1.6666
+target_values_batch range: 1.5075 to 1.6659
+Debug value function:
+value_batch range: -10.3307 to 1.6633
+returns_batch range: -18.5100 to 1.6680
+target_values_batch range: -7.0759 to 1.6660
+Debug value function:
+value_batch range: -14.0885 to 1.6637
+returns_batch range: -18.7554 to 1.6667
+target_values_batch range: -9.9316 to 1.6658
+Debug value function:
+value_batch range: -13.3042 to 1.6632
+returns_batch range: -18.1811 to 1.6680
+target_values_batch range: -9.3178 to 1.6659
+Debug value function:
+value_batch range: -12.6650 to 1.6629
+returns_batch range: -19.1756 to 1.6660
+target_values_batch range: -8.8683 to 1.6655
+Debug value function:
+value_batch range: -9.5843 to 1.6632
+returns_batch range: -18.8755 to 1.6667
+target_values_batch range: -6.5497 to 1.6657
+################################################################################
+                       Learning iteration 418/500                       
+
+                       Computation: 256581 steps/s (collection: 0.333s, learning 0.135s)
+               Value function loss: 0.0305
+                    Surrogate loss: -0.0014
+             Mean action noise std: 0.21
+                       Mean reward: 16.33
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0524
+         Episode_Reward/dof_acc_l2: -0.0061
+     Episode_Reward/action_rate_l2: -0.0814
+     Episode_Reward/dof_pos_limits: -0.0089
+          Episode_Reward/joint_pos: 0.9654
+Metrics/pose_command/error_joint_angles: 85.2425
+      Episode_Termination/time_out: 5.0833
+--------------------------------------------------------------------------------
+                   Total timesteps: 50280000
+                    Iteration time: 0.47s
+                        Total time: 195.41s
+                               ETA: 38.2s
+
+Debug value function:
+value_batch range: -70.4108 to 1.6619
+returns_batch range: -111.4496 to 1.6643
+target_values_batch range: -70.4108 to 1.6619
+Debug value function:
+value_batch range: -65.4997 to 1.6636
+returns_batch range: -107.6161 to 1.6619
+target_values_batch range: -65.1628 to 1.6632
+Debug value function:
+value_batch range: -41.6633 to 1.6638
+returns_batch range: -112.5803 to 1.6637
+target_values_batch range: -40.9866 to 1.6627
+Debug value function:
+value_batch range: -39.0820 to 1.6649
+returns_batch range: -111.8466 to 1.6646
+target_values_batch range: -37.9004 to 1.6627
+Debug value function:
+value_batch range: 1.5478 to 1.6654
+returns_batch range: 1.5243 to 1.6633
+target_values_batch range: 1.5480 to 1.6624
+Debug value function:
+value_batch range: -25.9869 to 1.6660
+returns_batch range: -102.5114 to 1.6638
+target_values_batch range: -24.0375 to 1.6636
+Debug value function:
+value_batch range: -48.5645 to 1.6632
+returns_batch range: -112.9417 to 1.6633
+target_values_batch range: -44.1673 to 1.6628
+Debug value function:
+value_batch range: -84.3888 to 1.6616
+returns_batch range: -112.8544 to 1.6637
+target_values_batch range: -76.0814 to 1.6625
+Debug value function:
+value_batch range: -91.8270 to 1.6612
+returns_batch range: -112.4209 to 1.6630
+target_values_batch range: -82.2013 to 1.6634
+Debug value function:
+value_batch range: -36.6554 to 1.6608
+returns_batch range: -109.4647 to 1.6638
+target_values_batch range: -32.4703 to 1.6634
+Debug value function:
+value_batch range: -79.3813 to 1.6601
+returns_batch range: -111.4496 to 1.6643
+target_values_batch range: -70.4108 to 1.6619
+Debug value function:
+value_batch range: -73.6334 to 1.6603
+returns_batch range: -107.6161 to 1.6619
+target_values_batch range: -65.1628 to 1.6632
+Debug value function:
+value_batch range: -46.5521 to 1.6599
+returns_batch range: -112.5803 to 1.6637
+target_values_batch range: -40.9866 to 1.6627
+Debug value function:
+value_batch range: -43.1375 to 1.6600
+returns_batch range: -111.8466 to 1.6646
+target_values_batch range: -37.9004 to 1.6627
+Debug value function:
+value_batch range: 1.5391 to 1.6607
+returns_batch range: 1.5243 to 1.6633
+target_values_batch range: 1.5480 to 1.6624
+Debug value function:
+value_batch range: -27.5825 to 1.6616
+returns_batch range: -102.5114 to 1.6638
+target_values_batch range: -24.0375 to 1.6636
+Debug value function:
+value_batch range: -50.3866 to 1.6606
+returns_batch range: -112.9417 to 1.6633
+target_values_batch range: -44.1673 to 1.6628
+Debug value function:
+value_batch range: -86.5371 to 1.6605
+returns_batch range: -112.8544 to 1.6637
+target_values_batch range: -76.0814 to 1.6625
+Debug value function:
+value_batch range: -93.5494 to 1.6609
+returns_batch range: -112.4209 to 1.6630
+target_values_batch range: -82.2013 to 1.6634
+Debug value function:
+value_batch range: -37.2481 to 1.6608
+returns_batch range: -109.4647 to 1.6638
+target_values_batch range: -32.4703 to 1.6634
+Debug value function:
+value_batch range: -80.3540 to 1.6606
+returns_batch range: -111.4496 to 1.6643
+target_values_batch range: -70.4108 to 1.6619
+Debug value function:
+value_batch range: -74.4038 to 1.6614
+returns_batch range: -107.6161 to 1.6619
+target_values_batch range: -65.1628 to 1.6632
+Debug value function:
+value_batch range: -47.0034 to 1.6613
+returns_batch range: -112.5803 to 1.6637
+target_values_batch range: -40.9866 to 1.6627
+Debug value function:
+value_batch range: -43.5250 to 1.6615
+returns_batch range: -111.8466 to 1.6646
+target_values_batch range: -37.9004 to 1.6627
+Debug value function:
+value_batch range: 1.5435 to 1.6618
+returns_batch range: 1.5243 to 1.6633
+target_values_batch range: 1.5480 to 1.6624
+Debug value function:
+value_batch range: -27.7783 to 1.6626
+returns_batch range: -102.5114 to 1.6638
+target_values_batch range: -24.0375 to 1.6636
+Debug value function:
+value_batch range: -50.7155 to 1.6617
+returns_batch range: -112.9417 to 1.6633
+target_values_batch range: -44.1673 to 1.6628
+Debug value function:
+value_batch range: -87.0354 to 1.6613
+returns_batch range: -112.8544 to 1.6637
+target_values_batch range: -76.0814 to 1.6625
+Debug value function:
+value_batch range: -94.0184 to 1.6617
+returns_batch range: -112.4209 to 1.6630
+target_values_batch range: -82.2013 to 1.6634
+Debug value function:
+value_batch range: -37.4152 to 1.6613
+returns_batch range: -109.4647 to 1.6638
+target_values_batch range: -32.4703 to 1.6634
+Debug value function:
+value_batch range: -80.6688 to 1.6605
+returns_batch range: -111.4496 to 1.6643
+target_values_batch range: -70.4108 to 1.6619
+Debug value function:
+value_batch range: -74.6641 to 1.6617
+returns_batch range: -107.6161 to 1.6619
+target_values_batch range: -65.1628 to 1.6632
+Debug value function:
+value_batch range: -47.1479 to 1.6613
+returns_batch range: -112.5803 to 1.6637
+target_values_batch range: -40.9866 to 1.6627
+Debug value function:
+value_batch range: -43.6372 to 1.6611
+returns_batch range: -111.8466 to 1.6646
+target_values_batch range: -37.9004 to 1.6627
+Debug value function:
+value_batch range: 1.5429 to 1.6611
+returns_batch range: 1.5243 to 1.6633
+target_values_batch range: 1.5480 to 1.6624
+Debug value function:
+value_batch range: -27.8339 to 1.6617
+returns_batch range: -102.5114 to 1.6638
+target_values_batch range: -24.0375 to 1.6636
+Debug value function:
+value_batch range: -50.7868 to 1.6608
+returns_batch range: -112.9417 to 1.6633
+target_values_batch range: -44.1673 to 1.6628
+Debug value function:
+value_batch range: -87.1500 to 1.6601
+returns_batch range: -112.8544 to 1.6637
+target_values_batch range: -76.0814 to 1.6625
+Debug value function:
+value_batch range: -94.1179 to 1.6607
+returns_batch range: -112.4209 to 1.6630
+target_values_batch range: -82.2013 to 1.6634
+Debug value function:
+value_batch range: -37.4540 to 1.6603
+returns_batch range: -109.4647 to 1.6638
+target_values_batch range: -32.4703 to 1.6634
+Debug value function:
+value_batch range: -80.7265 to 1.6593
+returns_batch range: -111.4496 to 1.6643
+target_values_batch range: -70.4108 to 1.6619
+Debug value function:
+value_batch range: -74.7017 to 1.6610
+returns_batch range: -107.6161 to 1.6619
+target_values_batch range: -65.1628 to 1.6632
+Debug value function:
+value_batch range: -47.1776 to 1.6603
+returns_batch range: -112.5803 to 1.6637
+target_values_batch range: -40.9866 to 1.6627
+Debug value function:
+value_batch range: -43.6542 to 1.6603
+returns_batch range: -111.8466 to 1.6646
+target_values_batch range: -37.9004 to 1.6627
+Debug value function:
+value_batch range: 1.5415 to 1.6604
+returns_batch range: 1.5243 to 1.6633
+target_values_batch range: 1.5480 to 1.6624
+Debug value function:
+value_batch range: -27.8501 to 1.6612
+returns_batch range: -102.5114 to 1.6638
+target_values_batch range: -24.0375 to 1.6636
+Debug value function:
+value_batch range: -50.8231 to 1.6605
+returns_batch range: -112.9417 to 1.6633
+target_values_batch range: -44.1673 to 1.6628
+Debug value function:
+value_batch range: -87.2051 to 1.6599
+returns_batch range: -112.8544 to 1.6637
+target_values_batch range: -76.0814 to 1.6625
+Debug value function:
+value_batch range: -94.1558 to 1.6607
+returns_batch range: -112.4209 to 1.6630
+target_values_batch range: -82.2013 to 1.6634
+Debug value function:
+value_batch range: -37.4742 to 1.6605
+returns_batch range: -109.4647 to 1.6638
+target_values_batch range: -32.4703 to 1.6634
+Debug value function:
+value_batch range: -80.7792 to 1.6595
+returns_batch range: -111.4496 to 1.6643
+target_values_batch range: -70.4108 to 1.6619
+Debug value function:
+value_batch range: -74.7614 to 1.6615
+returns_batch range: -107.6161 to 1.6619
+target_values_batch range: -65.1628 to 1.6632
+Debug value function:
+value_batch range: -47.1962 to 1.6606
+returns_batch range: -112.5803 to 1.6637
+target_values_batch range: -40.9866 to 1.6627
+Debug value function:
+value_batch range: -43.6814 to 1.6605
+returns_batch range: -111.8466 to 1.6646
+target_values_batch range: -37.9004 to 1.6627
+Debug value function:
+value_batch range: 1.5419 to 1.6605
+returns_batch range: 1.5243 to 1.6633
+target_values_batch range: 1.5480 to 1.6624
+Debug value function:
+value_batch range: -27.8582 to 1.6614
+returns_batch range: -102.5114 to 1.6638
+target_values_batch range: -24.0375 to 1.6636
+Debug value function:
+value_batch range: -50.8310 to 1.6607
+returns_batch range: -112.9417 to 1.6633
+target_values_batch range: -44.1673 to 1.6628
+Debug value function:
+value_batch range: -87.2186 to 1.6601
+returns_batch range: -112.8544 to 1.6637
+target_values_batch range: -76.0814 to 1.6625
+Debug value function:
+value_batch range: -94.1907 to 1.6609
+returns_batch range: -112.4209 to 1.6630
+target_values_batch range: -82.2013 to 1.6634
+Debug value function:
+value_batch range: -37.4802 to 1.6608
+returns_batch range: -109.4647 to 1.6638
+target_values_batch range: -32.4703 to 1.6634
+################################################################################
+                       Learning iteration 419/500                       
+
+                       Computation: 260539 steps/s (collection: 0.326s, learning 0.134s)
+               Value function loss: 0.9044
+                    Surrogate loss: -0.0026
+             Mean action noise std: 0.22
+                       Mean reward: 16.33
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0528
+         Episode_Reward/dof_acc_l2: -0.0063
+     Episode_Reward/action_rate_l2: -0.0817
+     Episode_Reward/dof_pos_limits: -0.0082
+          Episode_Reward/joint_pos: 0.9659
+Metrics/pose_command/error_joint_angles: 85.3378
+      Episode_Termination/time_out: 4.3750
+--------------------------------------------------------------------------------
+                   Total timesteps: 50400000
+                    Iteration time: 0.46s
+                        Total time: 195.87s
+                               ETA: 37.8s
+
+Debug value function:
+value_batch range: -520.8032 to 1.6614
+returns_batch range: -2780.0308 to 1.6637
+target_values_batch range: -520.8032 to 1.6614
+Debug value function:
+value_batch range: -846.4161 to 1.6616
+returns_batch range: -2499.2791 to 1.6620
+target_values_batch range: -840.8124 to 1.6607
+Debug value function:
+value_batch range: -480.8297 to 1.6636
+returns_batch range: -2788.6553 to 1.6622
+target_values_batch range: -473.2794 to 1.6616
+Debug value function:
+value_batch range: -401.5229 to 1.6635
+returns_batch range: -2729.9253 to 1.6627
+target_values_batch range: -390.5341 to 1.6608
+Debug value function:
+value_batch range: -966.6061 to 1.6643
+returns_batch range: -2438.1370 to 1.6636
+target_values_batch range: -925.3322 to 1.6613
+Debug value function:
+value_batch range: -453.1720 to 1.6635
+returns_batch range: -2770.8633 to 1.6628
+target_values_batch range: -429.7689 to 1.6604
+Debug value function:
+value_batch range: -811.8384 to 1.6630
+returns_batch range: -2282.0530 to 1.6625
+target_values_batch range: -763.8655 to 1.6609
+Debug value function:
+value_batch range: -612.3604 to 1.6612
+returns_batch range: -2734.4790 to 1.6639
+target_values_batch range: -573.2686 to 1.6602
+Debug value function:
+value_batch range: -313.8195 to 1.6620
+returns_batch range: -2523.7468 to 1.6628
+target_values_batch range: -292.9284 to 1.6609
+Debug value function:
+value_batch range: -677.6308 to 1.6624
+returns_batch range: -2644.6714 to 1.6636
+target_values_batch range: -630.9169 to 1.6620
+Debug value function:
+value_batch range: -560.2266 to 1.6613
+returns_batch range: -2780.0308 to 1.6637
+target_values_batch range: -520.8032 to 1.6614
+Debug value function:
+value_batch range: -905.5695 to 1.6599
+returns_batch range: -2499.2791 to 1.6620
+target_values_batch range: -840.8124 to 1.6607
+Debug value function:
+value_batch range: -510.4779 to 1.6609
+returns_batch range: -2788.6553 to 1.6622
+target_values_batch range: -473.2794 to 1.6616
+Debug value function:
+value_batch range: -421.6369 to 1.6590
+returns_batch range: -2729.9253 to 1.6627
+target_values_batch range: -390.5341 to 1.6608
+Debug value function:
+value_batch range: -999.8411 to 1.6593
+returns_batch range: -2438.1370 to 1.6636
+target_values_batch range: -925.3322 to 1.6613
+Debug value function:
+value_batch range: -465.0631 to 1.6584
+returns_batch range: -2770.8633 to 1.6628
+target_values_batch range: -429.7689 to 1.6604
+Debug value function:
+value_batch range: -827.0380 to 1.6583
+returns_batch range: -2282.0530 to 1.6625
+target_values_batch range: -763.8655 to 1.6609
+Debug value function:
+value_batch range: -621.1567 to 1.6575
+returns_batch range: -2734.4790 to 1.6639
+target_values_batch range: -573.2686 to 1.6602
+Debug value function:
+value_batch range: -317.6725 to 1.6586
+returns_batch range: -2523.7468 to 1.6628
+target_values_batch range: -292.9284 to 1.6609
+Debug value function:
+value_batch range: -684.2903 to 1.6597
+returns_batch range: -2644.6714 to 1.6636
+target_values_batch range: -630.9169 to 1.6620
+Debug value function:
+value_batch range: -565.3817 to 1.6589
+returns_batch range: -2780.0308 to 1.6637
+target_values_batch range: -520.8032 to 1.6614
+Debug value function:
+value_batch range: -912.9109 to 1.6579
+returns_batch range: -2499.2791 to 1.6620
+target_values_batch range: -840.8124 to 1.6607
+Debug value function:
+value_batch range: -514.1199 to 1.6592
+returns_batch range: -2788.6553 to 1.6622
+target_values_batch range: -473.2794 to 1.6616
+Debug value function:
+value_batch range: -424.5731 to 1.6578
+returns_batch range: -2729.9253 to 1.6627
+target_values_batch range: -390.5341 to 1.6608
+Debug value function:
+value_batch range: -1005.9634 to 1.6585
+returns_batch range: -2438.1370 to 1.6636
+target_values_batch range: -925.3322 to 1.6613
+Debug value function:
+value_batch range: -467.5420 to 1.6584
+returns_batch range: -2770.8633 to 1.6628
+target_values_batch range: -429.7689 to 1.6604
+Debug value function:
+value_batch range: -831.0549 to 1.6583
+returns_batch range: -2282.0530 to 1.6625
+target_values_batch range: -763.8655 to 1.6609
+Debug value function:
+value_batch range: -623.9655 to 1.6581
+returns_batch range: -2734.4790 to 1.6639
+target_values_batch range: -573.2686 to 1.6602
+Debug value function:
+value_batch range: -318.8945 to 1.6593
+returns_batch range: -2523.7468 to 1.6628
+target_values_batch range: -292.9284 to 1.6609
+Debug value function:
+value_batch range: -687.0581 to 1.6602
+returns_batch range: -2644.6714 to 1.6636
+target_values_batch range: -630.9169 to 1.6620
+Debug value function:
+value_batch range: -567.3075 to 1.6597
+returns_batch range: -2780.0308 to 1.6637
+target_values_batch range: -520.8032 to 1.6614
+Debug value function:
+value_batch range: -915.7693 to 1.6587
+returns_batch range: -2499.2791 to 1.6620
+target_values_batch range: -840.8124 to 1.6607
+Debug value function:
+value_batch range: -515.5615 to 1.6599
+returns_batch range: -2788.6553 to 1.6622
+target_values_batch range: -473.2794 to 1.6616
+Debug value function:
+value_batch range: -425.6067 to 1.6589
+returns_batch range: -2729.9253 to 1.6627
+target_values_batch range: -390.5341 to 1.6608
+Debug value function:
+value_batch range: -1008.5698 to 1.6595
+returns_batch range: -2438.1370 to 1.6636
+target_values_batch range: -925.3322 to 1.6613
+Debug value function:
+value_batch range: -468.6899 to 1.6592
+returns_batch range: -2770.8633 to 1.6628
+target_values_batch range: -429.7689 to 1.6604
+Debug value function:
+value_batch range: -832.8263 to 1.6590
+returns_batch range: -2282.0530 to 1.6625
+target_values_batch range: -763.8655 to 1.6609
+Debug value function:
+value_batch range: -625.0750 to 1.6586
+returns_batch range: -2734.4790 to 1.6639
+target_values_batch range: -573.2686 to 1.6602
+Debug value function:
+value_batch range: -319.4659 to 1.6598
+returns_batch range: -2523.7468 to 1.6628
+target_values_batch range: -292.9284 to 1.6609
+Debug value function:
+value_batch range: -687.9087 to 1.6605
+returns_batch range: -2644.6714 to 1.6636
+target_values_batch range: -630.9169 to 1.6620
+Debug value function:
+value_batch range: -567.9044 to 1.6598
+returns_batch range: -2780.0308 to 1.6637
+target_values_batch range: -520.8032 to 1.6614
+Debug value function:
+value_batch range: -917.0665 to 1.6588
+returns_batch range: -2499.2791 to 1.6620
+target_values_batch range: -840.8124 to 1.6607
+Debug value function:
+value_batch range: -516.1425 to 1.6597
+returns_batch range: -2788.6553 to 1.6622
+target_values_batch range: -473.2794 to 1.6616
+Debug value function:
+value_batch range: -426.0789 to 1.6586
+returns_batch range: -2729.9253 to 1.6627
+target_values_batch range: -390.5341 to 1.6608
+Debug value function:
+value_batch range: -1009.3164 to 1.6592
+returns_batch range: -2438.1370 to 1.6636
+target_values_batch range: -925.3322 to 1.6613
+Debug value function:
+value_batch range: -468.9692 to 1.6585
+returns_batch range: -2770.8633 to 1.6628
+target_values_batch range: -429.7689 to 1.6604
+Debug value function:
+value_batch range: -833.2009 to 1.6585
+returns_batch range: -2282.0530 to 1.6625
+target_values_batch range: -763.8655 to 1.6609
+Debug value function:
+value_batch range: -625.3057 to 1.6580
+returns_batch range: -2734.4790 to 1.6639
+target_values_batch range: -573.2686 to 1.6602
+Debug value function:
+value_batch range: -319.5329 to 1.6591
+returns_batch range: -2523.7468 to 1.6628
+target_values_batch range: -292.9284 to 1.6609
+Debug value function:
+value_batch range: -688.1218 to 1.6600
+returns_batch range: -2644.6714 to 1.6636
+target_values_batch range: -630.9169 to 1.6620
+Debug value function:
+value_batch range: -568.0610 to 1.6590
+returns_batch range: -2780.0308 to 1.6637
+target_values_batch range: -520.8032 to 1.6614
+Debug value function:
+value_batch range: -917.1534 to 1.6582
+returns_batch range: -2499.2791 to 1.6620
+target_values_batch range: -840.8124 to 1.6607
+Debug value function:
+value_batch range: -516.2161 to 1.6591
+returns_batch range: -2788.6553 to 1.6622
+target_values_batch range: -473.2794 to 1.6616
+Debug value function:
+value_batch range: -426.1281 to 1.6582
+returns_batch range: -2729.9253 to 1.6627
+target_values_batch range: -390.5341 to 1.6608
+Debug value function:
+value_batch range: -1009.5590 to 1.6588
+returns_batch range: -2438.1370 to 1.6636
+target_values_batch range: -925.3322 to 1.6613
+Debug value function:
+value_batch range: -468.9839 to 1.6580
+returns_batch range: -2770.8633 to 1.6628
+target_values_batch range: -429.7689 to 1.6604
+Debug value function:
+value_batch range: -833.3724 to 1.6582
+returns_batch range: -2282.0530 to 1.6625
+target_values_batch range: -763.8655 to 1.6609
+Debug value function:
+value_batch range: -625.3552 to 1.6578
+returns_batch range: -2734.4790 to 1.6639
+target_values_batch range: -573.2686 to 1.6602
+Debug value function:
+value_batch range: -319.6835 to 1.6589
+returns_batch range: -2523.7468 to 1.6628
+target_values_batch range: -292.9284 to 1.6609
+Debug value function:
+value_batch range: -688.1802 to 1.6598
+returns_batch range: -2644.6714 to 1.6636
+target_values_batch range: -630.9169 to 1.6620
+################################################################################
+                       Learning iteration 420/500                       
+
+                       Computation: 257525 steps/s (collection: 0.332s, learning 0.134s)
+               Value function loss: 746.6973
+                    Surrogate loss: -0.0027
+             Mean action noise std: 0.22
+                       Mean reward: 16.30
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0528
+         Episode_Reward/dof_acc_l2: -0.0059
+     Episode_Reward/action_rate_l2: -0.0820
+     Episode_Reward/dof_pos_limits: -0.0091
+          Episode_Reward/joint_pos: 0.9645
+Metrics/pose_command/error_joint_angles: 85.4594
+      Episode_Termination/time_out: 5.6667
+--------------------------------------------------------------------------------
+                   Total timesteps: 50520000
+                    Iteration time: 0.47s
+                        Total time: 196.34s
+                               ETA: 37.3s
+
+Debug value function:
+value_batch range: -3914.2478 to 1.6585
+returns_batch range: -206601.8281 to 1.6625
+target_values_batch range: -3914.2478 to 1.6585
+Debug value function:
+value_batch range: -1811.6121 to 1.6591
+returns_batch range: -151412.6562 to 1.6633
+target_values_batch range: -1802.7571 to 1.6584
+Debug value function:
+value_batch range: -10464.8896 to 1.6610
+returns_batch range: -212316.7500 to 1.6637
+target_values_batch range: -10320.6885 to 1.6587
+Debug value function:
+value_batch range: -1141.1345 to 1.6630
+returns_batch range: -116306.5859 to 1.6616
+target_values_batch range: -1110.9852 to 1.6589
+Debug value function:
+value_batch range: -7982.9512 to 1.6631
+returns_batch range: -209271.4688 to 1.6587
+target_values_batch range: -7714.1128 to 1.6581
+Debug value function:
+value_batch range: -9738.1787 to 1.6636
+returns_batch range: -191060.8906 to 1.6612
+target_values_batch range: -9365.9717 to 1.6577
+Debug value function:
+value_batch range: -8865.4111 to 1.6642
+returns_batch range: -210409.4688 to 1.6626
+target_values_batch range: -8502.3203 to 1.6591
+Debug value function:
+value_batch range: -3713.8806 to 1.6644
+returns_batch range: -201523.2188 to 1.6605
+target_values_batch range: -3553.6260 to 1.6602
+Debug value function:
+value_batch range: -4977.4072 to 1.6630
+returns_batch range: -212495.9688 to 1.6608
+target_values_batch range: -4751.8760 to 1.6579
+Debug value function:
+value_batch range: -2530.8743 to 1.6632
+returns_batch range: -174149.8594 to 1.6643
+target_values_batch range: -2411.2788 to 1.6586
+Debug value function:
+value_batch range: -4115.1973 to 1.6635
+returns_batch range: -206601.8281 to 1.6625
+target_values_batch range: -3914.2478 to 1.6585
+Debug value function:
+value_batch range: -1899.1902 to 1.6619
+returns_batch range: -151412.6562 to 1.6633
+target_values_batch range: -1802.7571 to 1.6584
+Debug value function:
+value_batch range: -10882.7559 to 1.6610
+returns_batch range: -212316.7500 to 1.6637
+target_values_batch range: -10320.6885 to 1.6587
+Debug value function:
+value_batch range: -1173.3873 to 1.6604
+returns_batch range: -116306.5859 to 1.6616
+target_values_batch range: -1110.9852 to 1.6589
+Debug value function:
+value_batch range: -8155.4111 to 1.6601
+returns_batch range: -209271.4688 to 1.6587
+target_values_batch range: -7714.1128 to 1.6581
+Debug value function:
+value_batch range: -9909.4512 to 1.6602
+returns_batch range: -191060.8906 to 1.6612
+target_values_batch range: -9365.9717 to 1.6577
+Debug value function:
+value_batch range: -9002.6279 to 1.6585
+returns_batch range: -210409.4688 to 1.6626
+target_values_batch range: -8502.3203 to 1.6591
+Debug value function:
+value_batch range: -3765.4209 to 1.6592
+returns_batch range: -201523.2188 to 1.6605
+target_values_batch range: -3553.6260 to 1.6602
+Debug value function:
+value_batch range: -5040.9497 to 1.6573
+returns_batch range: -212495.9688 to 1.6608
+target_values_batch range: -4751.8760 to 1.6579
+Debug value function:
+value_batch range: -2560.2839 to 1.6579
+returns_batch range: -174149.8594 to 1.6643
+target_values_batch range: -2411.2788 to 1.6586
+Debug value function:
+value_batch range: -4157.9673 to 1.6587
+returns_batch range: -206601.8281 to 1.6625
+target_values_batch range: -3914.2478 to 1.6585
+Debug value function:
+value_batch range: -1916.4175 to 1.6563
+returns_batch range: -151412.6562 to 1.6633
+target_values_batch range: -1802.7571 to 1.6584
+Debug value function:
+value_batch range: -10971.0967 to 1.6568
+returns_batch range: -212316.7500 to 1.6637
+target_values_batch range: -10320.6885 to 1.6587
+Debug value function:
+value_batch range: -1182.0978 to 1.6572
+returns_batch range: -116306.5859 to 1.6616
+target_values_batch range: -1110.9852 to 1.6589
+Debug value function:
+value_batch range: -8210.5645 to 1.6569
+returns_batch range: -209271.4688 to 1.6587
+target_values_batch range: -7714.1128 to 1.6581
+Debug value function:
+value_batch range: -9971.3057 to 1.6579
+returns_batch range: -191060.8906 to 1.6612
+target_values_batch range: -9365.9717 to 1.6577
+Debug value function:
+value_batch range: -9055.0283 to 1.6574
+returns_batch range: -210409.4688 to 1.6626
+target_values_batch range: -8502.3203 to 1.6591
+Debug value function:
+value_batch range: -3785.5454 to 1.6579
+returns_batch range: -201523.2188 to 1.6605
+target_values_batch range: -3553.6260 to 1.6602
+Debug value function:
+value_batch range: -5063.9658 to 1.6571
+returns_batch range: -212495.9688 to 1.6608
+target_values_batch range: -4751.8760 to 1.6579
+Debug value function:
+value_batch range: -2571.1292 to 1.6582
+returns_batch range: -174149.8594 to 1.6643
+target_values_batch range: -2411.2788 to 1.6586
+Debug value function:
+value_batch range: -4175.0674 to 1.6594
+returns_batch range: -206601.8281 to 1.6625
+target_values_batch range: -3914.2478 to 1.6585
+Debug value function:
+value_batch range: -1923.2572 to 1.6572
+returns_batch range: -151412.6562 to 1.6633
+target_values_batch range: -1802.7571 to 1.6584
+Debug value function:
+value_batch range: -11011.5146 to 1.6586
+returns_batch range: -212316.7500 to 1.6637
+target_values_batch range: -10320.6885 to 1.6587
+Debug value function:
+value_batch range: -1185.8781 to 1.6597
+returns_batch range: -116306.5859 to 1.6616
+target_values_batch range: -1110.9852 to 1.6589
+Debug value function:
+value_batch range: -8234.4521 to 1.6591
+returns_batch range: -209271.4688 to 1.6587
+target_values_batch range: -7714.1128 to 1.6581
+Debug value function:
+value_batch range: -9998.7207 to 1.6606
+returns_batch range: -191060.8906 to 1.6612
+target_values_batch range: -9365.9717 to 1.6577
+Debug value function:
+value_batch range: -9077.1328 to 1.6610
+returns_batch range: -210409.4688 to 1.6626
+target_values_batch range: -8502.3203 to 1.6591
+Debug value function:
+value_batch range: -3794.5840 to 1.6605
+returns_batch range: -201523.2188 to 1.6605
+target_values_batch range: -3553.6260 to 1.6602
+Debug value function:
+value_batch range: -5074.7715 to 1.6602
+returns_batch range: -212495.9688 to 1.6608
+target_values_batch range: -4751.8760 to 1.6579
+Debug value function:
+value_batch range: -2576.4084 to 1.6605
+returns_batch range: -174149.8594 to 1.6643
+target_values_batch range: -2411.2788 to 1.6586
+Debug value function:
+value_batch range: -4181.8169 to 1.6616
+returns_batch range: -206601.8281 to 1.6625
+target_values_batch range: -3914.2478 to 1.6585
+Debug value function:
+value_batch range: -1926.4596 to 1.6595
+returns_batch range: -151412.6562 to 1.6633
+target_values_batch range: -1802.7571 to 1.6584
+Debug value function:
+value_batch range: -11026.9385 to 1.6608
+returns_batch range: -212316.7500 to 1.6637
+target_values_batch range: -10320.6885 to 1.6587
+Debug value function:
+value_batch range: -1187.1650 to 1.6615
+returns_batch range: -116306.5859 to 1.6616
+target_values_batch range: -1110.9852 to 1.6589
+Debug value function:
+value_batch range: -8243.9531 to 1.6605
+returns_batch range: -209271.4688 to 1.6587
+target_values_batch range: -7714.1128 to 1.6581
+Debug value function:
+value_batch range: -10010.4785 to 1.6620
+returns_batch range: -191060.8906 to 1.6612
+target_values_batch range: -9365.9717 to 1.6577
+Debug value function:
+value_batch range: -9085.8154 to 1.6625
+returns_batch range: -210409.4688 to 1.6626
+target_values_batch range: -8502.3203 to 1.6591
+Debug value function:
+value_batch range: -3797.4060 to 1.6613
+returns_batch range: -201523.2188 to 1.6605
+target_values_batch range: -3553.6260 to 1.6602
+Debug value function:
+value_batch range: -5079.0967 to 1.6609
+returns_batch range: -212495.9688 to 1.6608
+target_values_batch range: -4751.8760 to 1.6579
+Debug value function:
+value_batch range: -2577.9050 to 1.6606
+returns_batch range: -174149.8594 to 1.6643
+target_values_batch range: -2411.2788 to 1.6586
+Debug value function:
+value_batch range: -4184.3149 to 1.6613
+returns_batch range: -206601.8281 to 1.6625
+target_values_batch range: -3914.2478 to 1.6585
+Debug value function:
+value_batch range: -1927.9437 to 1.6594
+returns_batch range: -151412.6562 to 1.6633
+target_values_batch range: -1802.7571 to 1.6584
+Debug value function:
+value_batch range: -11032.6914 to 1.6609
+returns_batch range: -212316.7500 to 1.6637
+target_values_batch range: -10320.6885 to 1.6587
+Debug value function:
+value_batch range: -1187.6008 to 1.6611
+returns_batch range: -116306.5859 to 1.6616
+target_values_batch range: -1110.9852 to 1.6589
+Debug value function:
+value_batch range: -8247.5195 to 1.6600
+returns_batch range: -209271.4688 to 1.6587
+target_values_batch range: -7714.1128 to 1.6581
+Debug value function:
+value_batch range: -10010.7578 to 1.6618
+returns_batch range: -191060.8906 to 1.6612
+target_values_batch range: -9365.9717 to 1.6577
+Debug value function:
+value_batch range: -9087.7920 to 1.6622
+returns_batch range: -210409.4688 to 1.6626
+target_values_batch range: -8502.3203 to 1.6591
+Debug value function:
+value_batch range: -3798.2947 to 1.6607
+returns_batch range: -201523.2188 to 1.6605
+target_values_batch range: -3553.6260 to 1.6602
+Debug value function:
+value_batch range: -5078.7178 to 1.6606
+returns_batch range: -212495.9688 to 1.6608
+target_values_batch range: -4751.8760 to 1.6579
+Debug value function:
+value_batch range: -2577.8008 to 1.6600
+returns_batch range: -174149.8594 to 1.6643
+target_values_batch range: -2411.2788 to 1.6586
+################################################################################
+                       Learning iteration 421/500                       
+
+                       Computation: 255789 steps/s (collection: 0.335s, learning 0.134s)
+               Value function loss: 5624586.0250
+                    Surrogate loss: -0.0025
+             Mean action noise std: 0.22
+                       Mean reward: 16.27
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0522
+         Episode_Reward/dof_acc_l2: -0.0063
+     Episode_Reward/action_rate_l2: -0.0820
+     Episode_Reward/dof_pos_limits: -0.0089
+          Episode_Reward/joint_pos: 0.9636
+Metrics/pose_command/error_joint_angles: 85.5905
+      Episode_Termination/time_out: 5.2500
+--------------------------------------------------------------------------------
+                   Total timesteps: 50640000
+                    Iteration time: 0.47s
+                        Total time: 196.81s
+                               ETA: 36.8s
+
+Debug value function:
+value_batch range: -91164.7500 to 1.6605
+returns_batch range: -21950714.0000 to 1.6586
+target_values_batch range: -91164.7500 to 1.6605
+Debug value function:
+value_batch range: -82725.1875 to 1.6611
+returns_batch range: -26129932.0000 to 1.6575
+target_values_batch range: -82419.4531 to 1.6606
+Debug value function:
+value_batch range: -27468.3340 to 1.6612
+returns_batch range: -21862632.0000 to 1.6589
+target_values_batch range: -27224.5566 to 1.6597
+Debug value function:
+value_batch range: -41288.9102 to 1.6641
+returns_batch range: -25450088.0000 to 1.6585
+target_values_batch range: -40722.3047 to 1.6616
+Debug value function:
+value_batch range: -25043.3262 to 1.6643
+returns_batch range: -20880846.0000 to 1.6589
+target_values_batch range: -24619.4473 to 1.6616
+Debug value function:
+value_batch range: -125772.7266 to 1.6636
+returns_batch range: -23767636.0000 to 1.6585
+target_values_batch range: -123299.2266 to 1.6607
+Debug value function:
+value_batch range: -103131.6406 to 1.6661
+returns_batch range: -26940084.0000 to 1.6576
+target_values_batch range: -100813.5859 to 1.6629
+Debug value function:
+value_batch range: -114380.6797 to 1.6633
+returns_batch range: -26643660.0000 to 1.6579
+target_values_batch range: -111479.2969 to 1.6599
+Debug value function:
+value_batch range: -69311.5547 to 1.6635
+returns_batch range: -26937148.0000 to 1.6581
+target_values_batch range: -67391.9062 to 1.6604
+Debug value function:
+value_batch range: -20743.6719 to 1.6648
+returns_batch range: -18930642.0000 to 1.6582
+target_values_batch range: -20128.2305 to 1.6613
+Debug value function:
+value_batch range: -94146.2891 to 1.6633
+returns_batch range: -21950714.0000 to 1.6586
+target_values_batch range: -91164.7500 to 1.6605
+Debug value function:
+value_batch range: -85289.9844 to 1.6634
+returns_batch range: -26129932.0000 to 1.6575
+target_values_batch range: -82419.4531 to 1.6606
+Debug value function:
+value_batch range: -28211.6191 to 1.6622
+returns_batch range: -21862632.0000 to 1.6589
+target_values_batch range: -27224.5566 to 1.6597
+Debug value function:
+value_batch range: -42259.3477 to 1.6638
+returns_batch range: -25450088.0000 to 1.6585
+target_values_batch range: -40722.3047 to 1.6616
+Debug value function:
+value_batch range: -25582.4395 to 1.6630
+returns_batch range: -20880846.0000 to 1.6589
+target_values_batch range: -24619.4473 to 1.6616
+Debug value function:
+value_batch range: -128296.4297 to 1.6619
+returns_batch range: -23767636.0000 to 1.6585
+target_values_batch range: -123299.2266 to 1.6607
+Debug value function:
+value_batch range: -104989.3203 to 1.6632
+returns_batch range: -26940084.0000 to 1.6576
+target_values_batch range: -100813.5859 to 1.6629
+Debug value function:
+value_batch range: -116227.4844 to 1.6606
+returns_batch range: -26643660.0000 to 1.6579
+target_values_batch range: -111479.2969 to 1.6599
+Debug value function:
+value_batch range: -70311.3516 to 1.6598
+returns_batch range: -26937148.0000 to 1.6581
+target_values_batch range: -67391.9062 to 1.6604
+Debug value function:
+value_batch range: -21016.2715 to 1.6606
+returns_batch range: -18930642.0000 to 1.6582
+target_values_batch range: -20128.2305 to 1.6613
+Debug value function:
+value_batch range: -95245.6406 to 1.6589
+returns_batch range: -21950714.0000 to 1.6586
+target_values_batch range: -91164.7500 to 1.6605
+Debug value function:
+value_batch range: -86192.1953 to 1.6592
+returns_batch range: -26129932.0000 to 1.6575
+target_values_batch range: -82419.4531 to 1.6606
+Debug value function:
+value_batch range: -28483.0625 to 1.6576
+returns_batch range: -21862632.0000 to 1.6589
+target_values_batch range: -27224.5566 to 1.6597
+Debug value function:
+value_batch range: -42623.3008 to 1.6597
+returns_batch range: -25450088.0000 to 1.6585
+target_values_batch range: -40722.3047 to 1.6616
+Debug value function:
+value_batch range: -25779.2930 to 1.6589
+returns_batch range: -20880846.0000 to 1.6589
+target_values_batch range: -24619.4473 to 1.6616
+Debug value function:
+value_batch range: -129141.2578 to 1.6582
+returns_batch range: -23767636.0000 to 1.6585
+target_values_batch range: -123299.2266 to 1.6607
+Debug value function:
+value_batch range: -105633.7422 to 1.6596
+returns_batch range: -26940084.0000 to 1.6576
+target_values_batch range: -100813.5859 to 1.6629
+Debug value function:
+value_batch range: -116880.6562 to 1.6575
+returns_batch range: -26643660.0000 to 1.6579
+target_values_batch range: -111479.2969 to 1.6599
+Debug value function:
+value_batch range: -70665.1562 to 1.6572
+returns_batch range: -26937148.0000 to 1.6581
+target_values_batch range: -67391.9062 to 1.6604
+Debug value function:
+value_batch range: -21110.8770 to 1.6580
+returns_batch range: -18930642.0000 to 1.6582
+target_values_batch range: -20128.2305 to 1.6613
+Debug value function:
+value_batch range: -95657.6016 to 1.6573
+returns_batch range: -21950714.0000 to 1.6586
+target_values_batch range: -91164.7500 to 1.6605
+Debug value function:
+value_batch range: -86508.7656 to 1.6581
+returns_batch range: -26129932.0000 to 1.6575
+target_values_batch range: -82419.4531 to 1.6606
+Debug value function:
+value_batch range: -28582.1504 to 1.6570
+returns_batch range: -21862632.0000 to 1.6589
+target_values_batch range: -27224.5566 to 1.6597
+Debug value function:
+value_batch range: -42751.8906 to 1.6593
+returns_batch range: -25450088.0000 to 1.6585
+target_values_batch range: -40722.3047 to 1.6616
+Debug value function:
+value_batch range: -25854.3086 to 1.6589
+returns_batch range: -20880846.0000 to 1.6589
+target_values_batch range: -24619.4473 to 1.6616
+Debug value function:
+value_batch range: -129512.2344 to 1.6583
+returns_batch range: -23767636.0000 to 1.6585
+target_values_batch range: -123299.2266 to 1.6607
+Debug value function:
+value_batch range: -105896.1328 to 1.6600
+returns_batch range: -26940084.0000 to 1.6576
+target_values_batch range: -100813.5859 to 1.6629
+Debug value function:
+value_batch range: -117131.8281 to 1.6580
+returns_batch range: -26643660.0000 to 1.6579
+target_values_batch range: -111479.2969 to 1.6599
+Debug value function:
+value_batch range: -70801.1094 to 1.6581
+returns_batch range: -26937148.0000 to 1.6581
+target_values_batch range: -67391.9062 to 1.6604
+Debug value function:
+value_batch range: -21152.4863 to 1.6584
+returns_batch range: -18930642.0000 to 1.6582
+target_values_batch range: -20128.2305 to 1.6613
+Debug value function:
+value_batch range: -95815.8594 to 1.6582
+returns_batch range: -21950714.0000 to 1.6586
+target_values_batch range: -91164.7500 to 1.6605
+Debug value function:
+value_batch range: -86644.9141 to 1.6592
+returns_batch range: -26129932.0000 to 1.6575
+target_values_batch range: -82419.4531 to 1.6606
+Debug value function:
+value_batch range: -28618.7520 to 1.6581
+returns_batch range: -21862632.0000 to 1.6589
+target_values_batch range: -27224.5566 to 1.6597
+Debug value function:
+value_batch range: -42806.1992 to 1.6596
+returns_batch range: -25450088.0000 to 1.6585
+target_values_batch range: -40722.3047 to 1.6616
+Debug value function:
+value_batch range: -25883.4805 to 1.6596
+returns_batch range: -20880846.0000 to 1.6589
+target_values_batch range: -24619.4473 to 1.6616
+Debug value function:
+value_batch range: -129645.6719 to 1.6589
+returns_batch range: -23767636.0000 to 1.6585
+target_values_batch range: -123299.2266 to 1.6607
+Debug value function:
+value_batch range: -106007.5547 to 1.6600
+returns_batch range: -26940084.0000 to 1.6576
+target_values_batch range: -100813.5859 to 1.6629
+Debug value function:
+value_batch range: -117249.3906 to 1.6581
+returns_batch range: -26643660.0000 to 1.6579
+target_values_batch range: -111479.2969 to 1.6599
+Debug value function:
+value_batch range: -70873.1875 to 1.6581
+returns_batch range: -26937148.0000 to 1.6581
+target_values_batch range: -67391.9062 to 1.6604
+Debug value function:
+value_batch range: -21163.7129 to 1.6579
+returns_batch range: -18930642.0000 to 1.6582
+target_values_batch range: -20128.2305 to 1.6613
+Debug value function:
+value_batch range: -95855.2578 to 1.6579
+returns_batch range: -21950714.0000 to 1.6586
+target_values_batch range: -91164.7500 to 1.6605
+Debug value function:
+value_batch range: -86688.1719 to 1.6588
+returns_batch range: -26129932.0000 to 1.6575
+target_values_batch range: -82419.4531 to 1.6606
+Debug value function:
+value_batch range: -28632.9902 to 1.6576
+returns_batch range: -21862632.0000 to 1.6589
+target_values_batch range: -27224.5566 to 1.6597
+Debug value function:
+value_batch range: -42813.0898 to 1.6585
+returns_batch range: -25450088.0000 to 1.6585
+target_values_batch range: -40722.3047 to 1.6616
+Debug value function:
+value_batch range: -25889.7109 to 1.6587
+returns_batch range: -20880846.0000 to 1.6589
+target_values_batch range: -24619.4473 to 1.6616
+Debug value function:
+value_batch range: -129675.5156 to 1.6577
+returns_batch range: -23767636.0000 to 1.6585
+target_values_batch range: -123299.2266 to 1.6607
+Debug value function:
+value_batch range: -106023.9453 to 1.6586
+returns_batch range: -26940084.0000 to 1.6576
+target_values_batch range: -100813.5859 to 1.6629
+Debug value function:
+value_batch range: -117272.4688 to 1.6570
+returns_batch range: -26643660.0000 to 1.6579
+target_values_batch range: -111479.2969 to 1.6599
+Debug value function:
+value_batch range: -70875.1094 to 1.6570
+returns_batch range: -26937148.0000 to 1.6581
+target_values_batch range: -67391.9062 to 1.6604
+Debug value function:
+value_batch range: -21165.9160 to 1.6569
+returns_batch range: -18930642.0000 to 1.6582
+target_values_batch range: -20128.2305 to 1.6613
+################################################################################
+                       Learning iteration 422/500                       
+
+                       Computation: 263708 steps/s (collection: 0.330s, learning 0.125s)
+               Value function loss: 93122766848.0000
+                    Surrogate loss: -0.0025
+             Mean action noise std: 0.22
+                       Mean reward: 15.63
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0656
+         Episode_Reward/dof_acc_l2: -0.0064
+     Episode_Reward/action_rate_l2: -0.0867
+     Episode_Reward/dof_pos_limits: -0.0091
+          Episode_Reward/joint_pos: 0.9641
+Metrics/pose_command/error_joint_angles: 85.7493
+      Episode_Termination/time_out: 5.4583
+--------------------------------------------------------------------------------
+                   Total timesteps: 50760000
+                    Iteration time: 0.46s
+                        Total time: 197.26s
+                               ETA: 36.4s
+
+Debug value function:
+value_batch range: -1226824.8750 to 1.6561
+returns_batch range: -3700762880.0000 to 1.6558
+target_values_batch range: -1226824.8750 to 1.6561
+Debug value function:
+value_batch range: -1110631.6250 to 1.6572
+returns_batch range: -3027523072.0000 to 1.6564
+target_values_batch range: -1107412.8750 to 1.6568
+Debug value function:
+value_batch range: -176870.7812 to 1.6575
+returns_batch range: -2201385728.0000 to 1.6561
+target_values_batch range: -175819.9531 to 1.6566
+Debug value function:
+value_batch range: -910750.1250 to 1.6615
+returns_batch range: -3541509376.0000 to 1.6553
+target_values_batch range: -902284.8750 to 1.6603
+Debug value function:
+value_batch range: -1523795.3750 to 1.6612
+returns_batch range: -3374399488.0000 to 1.6566
+target_values_batch range: -1505358.3750 to 1.6597
+Debug value function:
+value_batch range: -4154.8242 to 1.6591
+returns_batch range: -30949.0176 to 1.6565
+target_values_batch range: -4094.5508 to 1.6573
+Debug value function:
+value_batch range: -747940.1875 to 1.6587
+returns_batch range: -3704427264.0000 to 1.6566
+target_values_batch range: -735501.8125 to 1.6572
+Debug value function:
+value_batch range: -1384347.2500 to 1.6609
+returns_batch range: -2987162368.0000 to 1.6561
+target_values_batch range: -1358935.5000 to 1.6594
+Debug value function:
+value_batch range: -1020344.3750 to 1.6618
+returns_batch range: -3338642944.0000 to 1.6557
+target_values_batch range: -999815.5000 to 1.6606
+Debug value function:
+value_batch range: -832368.0000 to 1.6570
+returns_batch range: -3657248512.0000 to 1.6567
+target_values_batch range: -814565.3750 to 1.6559
+Debug value function:
+value_batch range: -1255119.5000 to 1.6566
+returns_batch range: -3700762880.0000 to 1.6558
+target_values_batch range: -1226824.8750 to 1.6561
+Debug value function:
+value_batch range: -1134813.6250 to 1.6570
+returns_batch range: -3027523072.0000 to 1.6564
+target_values_batch range: -1107412.8750 to 1.6568
+Debug value function:
+value_batch range: -180377.2969 to 1.6564
+returns_batch range: -2201385728.0000 to 1.6561
+target_values_batch range: -175819.9531 to 1.6566
+Debug value function:
+value_batch range: -926553.5625 to 1.6594
+returns_batch range: -3541509376.0000 to 1.6553
+target_values_batch range: -902284.8750 to 1.6603
+Debug value function:
+value_batch range: -1547243.5000 to 1.6585
+returns_batch range: -3374399488.0000 to 1.6566
+target_values_batch range: -1505358.3750 to 1.6597
+Debug value function:
+value_batch range: -4212.0215 to 1.6558
+returns_batch range: -30949.0176 to 1.6565
+target_values_batch range: -4094.5508 to 1.6573
+Debug value function:
+value_batch range: -757011.6250 to 1.6547
+returns_batch range: -3704427264.0000 to 1.6566
+target_values_batch range: -735501.8125 to 1.6572
+Debug value function:
+value_batch range: -1399405.1250 to 1.6569
+returns_batch range: -2987162368.0000 to 1.6561
+target_values_batch range: -1358935.5000 to 1.6594
+Debug value function:
+value_batch range: -1030311.3125 to 1.6575
+returns_batch range: -3338642944.0000 to 1.6557
+target_values_batch range: -999815.5000 to 1.6606
+Debug value function:
+value_batch range: -839858.4375 to 1.6525
+returns_batch range: -3657248512.0000 to 1.6567
+target_values_batch range: -814565.3750 to 1.6559
+Debug value function:
+value_batch range: -1265301.6250 to 1.6519
+returns_batch range: -3700762880.0000 to 1.6558
+target_values_batch range: -1226824.8750 to 1.6561
+Debug value function:
+value_batch range: -1142865.0000 to 1.6523
+returns_batch range: -3027523072.0000 to 1.6564
+target_values_batch range: -1107412.8750 to 1.6568
+Debug value function:
+value_batch range: -181488.1875 to 1.6523
+returns_batch range: -2201385728.0000 to 1.6561
+target_values_batch range: -175819.9531 to 1.6566
+Debug value function:
+value_batch range: -931796.8125 to 1.6554
+returns_batch range: -3541509376.0000 to 1.6553
+target_values_batch range: -902284.8750 to 1.6603
+Debug value function:
+value_batch range: -1554962.1250 to 1.6552
+returns_batch range: -3374399488.0000 to 1.6566
+target_values_batch range: -1505358.3750 to 1.6597
+Debug value function:
+value_batch range: -4230.9097 to 1.6528
+returns_batch range: -30949.0176 to 1.6565
+target_values_batch range: -4094.5508 to 1.6573
+Debug value function:
+value_batch range: -759988.8750 to 1.6518
+returns_batch range: -3704427264.0000 to 1.6566
+target_values_batch range: -735501.8125 to 1.6572
+Debug value function:
+value_batch range: -1404878.8750 to 1.6544
+returns_batch range: -2987162368.0000 to 1.6561
+target_values_batch range: -1358935.5000 to 1.6594
+Debug value function:
+value_batch range: -1033618.6875 to 1.6553
+returns_batch range: -3338642944.0000 to 1.6557
+target_values_batch range: -999815.5000 to 1.6606
+Debug value function:
+value_batch range: -842362.1875 to 1.6512
+returns_batch range: -3657248512.0000 to 1.6567
+target_values_batch range: -814565.3750 to 1.6559
+Debug value function:
+value_batch range: -1268890.5000 to 1.6512
+returns_batch range: -3700762880.0000 to 1.6558
+target_values_batch range: -1226824.8750 to 1.6561
+Debug value function:
+value_batch range: -1145531.5000 to 1.6518
+returns_batch range: -3027523072.0000 to 1.6564
+target_values_batch range: -1107412.8750 to 1.6568
+Debug value function:
+value_batch range: -181874.6406 to 1.6519
+returns_batch range: -2201385728.0000 to 1.6561
+target_values_batch range: -175819.9531 to 1.6566
+Debug value function:
+value_batch range: -933603.0000 to 1.6554
+returns_batch range: -3541509376.0000 to 1.6553
+target_values_batch range: -902284.8750 to 1.6603
+Debug value function:
+value_batch range: -1557901.7500 to 1.6553
+returns_batch range: -3374399488.0000 to 1.6566
+target_values_batch range: -1505358.3750 to 1.6597
+Debug value function:
+value_batch range: -4238.3452 to 1.6533
+returns_batch range: -30949.0176 to 1.6565
+target_values_batch range: -4094.5508 to 1.6573
+Debug value function:
+value_batch range: -761381.3125 to 1.6522
+returns_batch range: -3704427264.0000 to 1.6566
+target_values_batch range: -735501.8125 to 1.6572
+Debug value function:
+value_batch range: -1406766.7500 to 1.6549
+returns_batch range: -2987162368.0000 to 1.6561
+target_values_batch range: -1358935.5000 to 1.6594
+Debug value function:
+value_batch range: -1035251.6250 to 1.6557
+returns_batch range: -3338642944.0000 to 1.6557
+target_values_batch range: -999815.5000 to 1.6606
+Debug value function:
+value_batch range: -843385.7500 to 1.6520
+returns_batch range: -3657248512.0000 to 1.6567
+target_values_batch range: -814565.3750 to 1.6559
+Debug value function:
+value_batch range: -1270273.1250 to 1.6521
+returns_batch range: -3700762880.0000 to 1.6558
+target_values_batch range: -1226824.8750 to 1.6561
+Debug value function:
+value_batch range: -1147103.1250 to 1.6531
+returns_batch range: -3027523072.0000 to 1.6564
+target_values_batch range: -1107412.8750 to 1.6568
+Debug value function:
+value_batch range: -182033.7031 to 1.6528
+returns_batch range: -2201385728.0000 to 1.6561
+target_values_batch range: -175819.9531 to 1.6566
+Debug value function:
+value_batch range: -934611.8125 to 1.6560
+returns_batch range: -3541509376.0000 to 1.6553
+target_values_batch range: -902284.8750 to 1.6603
+Debug value function:
+value_batch range: -1558994.5000 to 1.6559
+returns_batch range: -3374399488.0000 to 1.6566
+target_values_batch range: -1505358.3750 to 1.6597
+Debug value function:
+value_batch range: -4241.6245 to 1.6537
+returns_batch range: -30949.0176 to 1.6565
+target_values_batch range: -4094.5508 to 1.6573
+Debug value function:
+value_batch range: -761710.3125 to 1.6524
+returns_batch range: -3704427264.0000 to 1.6566
+target_values_batch range: -735501.8125 to 1.6572
+Debug value function:
+value_batch range: -1407239.3750 to 1.6550
+returns_batch range: -2987162368.0000 to 1.6561
+target_values_batch range: -1358935.5000 to 1.6594
+Debug value function:
+value_batch range: -1035701.8125 to 1.6555
+returns_batch range: -3338642944.0000 to 1.6557
+target_values_batch range: -999815.5000 to 1.6606
+Debug value function:
+value_batch range: -843665.9375 to 1.6519
+returns_batch range: -3657248512.0000 to 1.6567
+target_values_batch range: -814565.3750 to 1.6559
+Debug value function:
+value_batch range: -1270775.8750 to 1.6520
+returns_batch range: -3700762880.0000 to 1.6558
+target_values_batch range: -1226824.8750 to 1.6561
+Debug value function:
+value_batch range: -1147339.0000 to 1.6528
+returns_batch range: -3027523072.0000 to 1.6564
+target_values_batch range: -1107412.8750 to 1.6568
+Debug value function:
+value_batch range: -182101.7812 to 1.6523
+returns_batch range: -2201385728.0000 to 1.6561
+target_values_batch range: -175819.9531 to 1.6566
+Debug value function:
+value_batch range: -934855.2500 to 1.6554
+returns_batch range: -3541509376.0000 to 1.6553
+target_values_batch range: -902284.8750 to 1.6603
+Debug value function:
+value_batch range: -1559847.3750 to 1.6552
+returns_batch range: -3374399488.0000 to 1.6566
+target_values_batch range: -1505358.3750 to 1.6597
+Debug value function:
+value_batch range: -4242.5264 to 1.6530
+returns_batch range: -30949.0176 to 1.6565
+target_values_batch range: -4094.5508 to 1.6573
+Debug value function:
+value_batch range: -761895.3125 to 1.6515
+returns_batch range: -3704427264.0000 to 1.6566
+target_values_batch range: -735501.8125 to 1.6572
+Debug value function:
+value_batch range: -1407426.0000 to 1.6541
+returns_batch range: -2987162368.0000 to 1.6561
+target_values_batch range: -1358935.5000 to 1.6594
+Debug value function:
+value_batch range: -1035727.7500 to 1.6545
+returns_batch range: -3338642944.0000 to 1.6557
+target_values_batch range: -999815.5000 to 1.6606
+Debug value function:
+value_batch range: -843864.3125 to 1.6511
+returns_batch range: -3657248512.0000 to 1.6567
+target_values_batch range: -814565.3750 to 1.6559
+################################################################################
+                       Learning iteration 423/500                       
+
+                       Computation: 268455 steps/s (collection: 0.322s, learning 0.125s)
+               Value function loss: 1757786216082682.2500
+                    Surrogate loss: -0.0027
+             Mean action noise std: 0.22
+                       Mean reward: 16.26
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0528
+         Episode_Reward/dof_acc_l2: -0.0062
+     Episode_Reward/action_rate_l2: -0.0831
+     Episode_Reward/dof_pos_limits: -0.0088
+          Episode_Reward/joint_pos: 0.9646
+Metrics/pose_command/error_joint_angles: 85.9013
+      Episode_Termination/time_out: 5.8750
+--------------------------------------------------------------------------------
+                   Total timesteps: 50880000
+                    Iteration time: 0.45s
+                        Total time: 197.71s
+                               ETA: 35.9s
+
+Debug value function:
+value_batch range: -7230996.5000 to 1.6513
+returns_batch range: -495164588032.0000 to 1.6512
+target_values_batch range: -7230996.5000 to 1.6513
+Debug value function:
+value_batch range: -14829746.0000 to 1.6526
+returns_batch range: -440421810176.0000 to 1.6514
+target_values_batch range: -14790465.0000 to 1.6521
+Debug value function:
+value_batch range: -18250788.0000 to 1.6514
+returns_batch range: -472192679936.0000 to 1.6493
+target_values_batch range: -18150466.0000 to 1.6506
+Debug value function:
+value_batch range: -9919620.0000 to 1.6533
+returns_batch range: -495038169088.0000 to 1.6508
+target_values_batch range: -9826891.0000 to 1.6518
+Debug value function:
+value_batch range: -8114758.0000 to 1.6549
+returns_batch range: -500971765760.0000 to 1.6517
+target_values_batch range: -8009954.0000 to 1.6526
+Debug value function:
+value_batch range: -30106.3848 to 1.6541
+returns_batch range: -3589566.5000 to 1.6490
+target_values_batch range: -29609.1191 to 1.6514
+Debug value function:
+value_batch range: -11102429.0000 to 1.6564
+returns_batch range: -479484641280.0000 to 1.6516
+target_values_batch range: -10885596.0000 to 1.6529
+Debug value function:
+value_batch range: -9079928.0000 to 1.6569
+returns_batch range: -501583642624.0000 to 1.6517
+target_values_batch range: -8872858.0000 to 1.6531
+Debug value function:
+value_batch range: -12377877.0000 to 1.6551
+returns_batch range: -452290445312.0000 to 1.6497
+target_values_batch range: -12056205.0000 to 1.6512
+Debug value function:
+value_batch range: -16864594.0000 to 1.6560
+returns_batch range: -485193678848.0000 to 1.6506
+target_values_batch range: -16385737.0000 to 1.6519
+Debug value function:
+value_batch range: -7461170.5000 to 1.6556
+returns_batch range: -495164588032.0000 to 1.6512
+target_values_batch range: -7230996.5000 to 1.6513
+Debug value function:
+value_batch range: -15296528.0000 to 1.6567
+returns_batch range: -440421810176.0000 to 1.6514
+target_values_batch range: -14790465.0000 to 1.6521
+Debug value function:
+value_batch range: -18809684.0000 to 1.6552
+returns_batch range: -472192679936.0000 to 1.6493
+target_values_batch range: -18150466.0000 to 1.6506
+Debug value function:
+value_batch range: -10202890.0000 to 1.6559
+returns_batch range: -495038169088.0000 to 1.6508
+target_values_batch range: -9826891.0000 to 1.6518
+Debug value function:
+value_batch range: -8328766.0000 to 1.6571
+returns_batch range: -500971765760.0000 to 1.6517
+target_values_batch range: -8009954.0000 to 1.6526
+Debug value function:
+value_batch range: -30842.5098 to 1.6542
+returns_batch range: -3589566.5000 to 1.6490
+target_values_batch range: -29609.1191 to 1.6514
+Debug value function:
+value_batch range: -11347729.0000 to 1.6562
+returns_batch range: -479484641280.0000 to 1.6516
+target_values_batch range: -10885596.0000 to 1.6529
+Debug value function:
+value_batch range: -9261908.0000 to 1.6558
+returns_batch range: -501583642624.0000 to 1.6517
+target_values_batch range: -8872858.0000 to 1.6531
+Debug value function:
+value_batch range: -12597157.0000 to 1.6532
+returns_batch range: -452290445312.0000 to 1.6497
+target_values_batch range: -12056205.0000 to 1.6512
+Debug value function:
+value_batch range: -17139898.0000 to 1.6534
+returns_batch range: -485193678848.0000 to 1.6506
+target_values_batch range: -16385737.0000 to 1.6519
+Debug value function:
+value_batch range: -7568601.0000 to 1.6528
+returns_batch range: -495164588032.0000 to 1.6512
+target_values_batch range: -7230996.5000 to 1.6513
+Debug value function:
+value_batch range: -15497055.0000 to 1.6542
+returns_batch range: -440421810176.0000 to 1.6514
+target_values_batch range: -14790465.0000 to 1.6521
+Debug value function:
+value_batch range: -19028436.0000 to 1.6521
+returns_batch range: -472192679936.0000 to 1.6493
+target_values_batch range: -18150466.0000 to 1.6506
+Debug value function:
+value_batch range: -10308215.0000 to 1.6536
+returns_batch range: -495038169088.0000 to 1.6508
+target_values_batch range: -9826891.0000 to 1.6518
+Debug value function:
+value_batch range: -8407831.0000 to 1.6551
+returns_batch range: -500971765760.0000 to 1.6517
+target_values_batch range: -8009954.0000 to 1.6526
+Debug value function:
+value_batch range: -31096.3555 to 1.6513
+returns_batch range: -3589566.5000 to 1.6490
+target_values_batch range: -29609.1191 to 1.6514
+Debug value function:
+value_batch range: -11435517.0000 to 1.6537
+returns_batch range: -479484641280.0000 to 1.6516
+target_values_batch range: -10885596.0000 to 1.6529
+Debug value function:
+value_batch range: -9324820.0000 to 1.6534
+returns_batch range: -501583642624.0000 to 1.6517
+target_values_batch range: -8872858.0000 to 1.6531
+Debug value function:
+value_batch range: -12675781.0000 to 1.6515
+returns_batch range: -452290445312.0000 to 1.6497
+target_values_batch range: -12056205.0000 to 1.6512
+Debug value function:
+value_batch range: -17236338.0000 to 1.6519
+returns_batch range: -485193678848.0000 to 1.6506
+target_values_batch range: -16385737.0000 to 1.6519
+Debug value function:
+value_batch range: -7608286.5000 to 1.6520
+returns_batch range: -495164588032.0000 to 1.6512
+target_values_batch range: -7230996.5000 to 1.6513
+Debug value function:
+value_batch range: -15570319.0000 to 1.6539
+returns_batch range: -440421810176.0000 to 1.6514
+target_values_batch range: -14790465.0000 to 1.6521
+Debug value function:
+value_batch range: -19112648.0000 to 1.6523
+returns_batch range: -472192679936.0000 to 1.6493
+target_values_batch range: -18150466.0000 to 1.6506
+Debug value function:
+value_batch range: -10347164.0000 to 1.6544
+returns_batch range: -495038169088.0000 to 1.6508
+target_values_batch range: -9826891.0000 to 1.6518
+Debug value function:
+value_batch range: -8437808.0000 to 1.6566
+returns_batch range: -500971765760.0000 to 1.6517
+target_values_batch range: -8009954.0000 to 1.6526
+Debug value function:
+value_batch range: -31203.6504 to 1.6525
+returns_batch range: -3589566.5000 to 1.6490
+target_values_batch range: -29609.1191 to 1.6514
+Debug value function:
+value_batch range: -11470690.0000 to 1.6554
+returns_batch range: -479484641280.0000 to 1.6516
+target_values_batch range: -10885596.0000 to 1.6529
+Debug value function:
+value_batch range: -9350578.0000 to 1.6555
+returns_batch range: -501583642624.0000 to 1.6517
+target_values_batch range: -8872858.0000 to 1.6531
+Debug value function:
+value_batch range: -12706912.0000 to 1.6536
+returns_batch range: -452290445312.0000 to 1.6497
+target_values_batch range: -12056205.0000 to 1.6512
+Debug value function:
+value_batch range: -17279300.0000 to 1.6543
+returns_batch range: -485193678848.0000 to 1.6506
+target_values_batch range: -16385737.0000 to 1.6519
+Debug value function:
+value_batch range: -7624283.0000 to 1.6544
+returns_batch range: -495164588032.0000 to 1.6512
+target_values_batch range: -7230996.5000 to 1.6513
+Debug value function:
+value_batch range: -15599832.0000 to 1.6565
+returns_batch range: -440421810176.0000 to 1.6514
+target_values_batch range: -14790465.0000 to 1.6521
+Debug value function:
+value_batch range: -19147840.0000 to 1.6545
+returns_batch range: -472192679936.0000 to 1.6493
+target_values_batch range: -18150466.0000 to 1.6506
+Debug value function:
+value_batch range: -10367987.0000 to 1.6568
+returns_batch range: -495038169088.0000 to 1.6508
+target_values_batch range: -9826891.0000 to 1.6518
+Debug value function:
+value_batch range: -8450987.0000 to 1.6589
+returns_batch range: -500971765760.0000 to 1.6517
+target_values_batch range: -8009954.0000 to 1.6526
+Debug value function:
+value_batch range: -31252.0488 to 1.6547
+returns_batch range: -3589566.5000 to 1.6490
+target_values_batch range: -29609.1191 to 1.6514
+Debug value function:
+value_batch range: -11484834.0000 to 1.6573
+returns_batch range: -479484641280.0000 to 1.6516
+target_values_batch range: -10885596.0000 to 1.6529
+Debug value function:
+value_batch range: -9363212.0000 to 1.6572
+returns_batch range: -501583642624.0000 to 1.6517
+target_values_batch range: -8872858.0000 to 1.6531
+Debug value function:
+value_batch range: -12724611.0000 to 1.6551
+returns_batch range: -452290445312.0000 to 1.6497
+target_values_batch range: -12056205.0000 to 1.6512
+Debug value function:
+value_batch range: -17293762.0000 to 1.6556
+returns_batch range: -485193678848.0000 to 1.6506
+target_values_batch range: -16385737.0000 to 1.6519
+Debug value function:
+value_batch range: -7631400.0000 to 1.6554
+returns_batch range: -495164588032.0000 to 1.6512
+target_values_batch range: -7230996.5000 to 1.6513
+Debug value function:
+value_batch range: -15613801.0000 to 1.6576
+returns_batch range: -440421810176.0000 to 1.6514
+target_values_batch range: -14790465.0000 to 1.6521
+Debug value function:
+value_batch range: -19161002.0000 to 1.6554
+returns_batch range: -472192679936.0000 to 1.6493
+target_values_batch range: -18150466.0000 to 1.6506
+Debug value function:
+value_batch range: -10373418.0000 to 1.6574
+returns_batch range: -495038169088.0000 to 1.6508
+target_values_batch range: -9826891.0000 to 1.6518
+Debug value function:
+value_batch range: -8455688.0000 to 1.6590
+returns_batch range: -500971765760.0000 to 1.6517
+target_values_batch range: -8009954.0000 to 1.6526
+Debug value function:
+value_batch range: -31260.0430 to 1.6551
+returns_batch range: -3589566.5000 to 1.6490
+target_values_batch range: -29609.1191 to 1.6514
+Debug value function:
+value_batch range: -11488398.0000 to 1.6574
+returns_batch range: -479484641280.0000 to 1.6516
+target_values_batch range: -10885596.0000 to 1.6529
+Debug value function:
+value_batch range: -9364917.0000 to 1.6572
+returns_batch range: -501583642624.0000 to 1.6517
+target_values_batch range: -8872858.0000 to 1.6531
+Debug value function:
+value_batch range: -12729380.0000 to 1.6548
+returns_batch range: -452290445312.0000 to 1.6497
+target_values_batch range: -12056205.0000 to 1.6512
+Debug value function:
+value_batch range: -17297974.0000 to 1.6553
+returns_batch range: -485193678848.0000 to 1.6506
+target_values_batch range: -16385737.0000 to 1.6519
+################################################################################
+                       Learning iteration 424/500                       
+
+                       Computation: 262991 steps/s (collection: 0.331s, learning 0.125s)
+               Value function loss: 32254614615207153664.0000
+                    Surrogate loss: -0.0027
+             Mean action noise std: 0.22
+                       Mean reward: 16.27
+               Mean episode length: 1000.00
+     Episode_Reward/dof_torques_l2: -0.0523
+         Episode_Reward/dof_acc_l2: -0.0064
+     Episode_Reward/action_rate_l2: -0.0834
+     Episode_Reward/dof_pos_limits: -0.0087
+          Episode_Reward/joint_pos: 0.9642
+Metrics/pose_command/error_joint_angles: 86.0515
+      Episode_Termination/time_out: 5.0000
+--------------------------------------------------------------------------------
