@@ -26,6 +26,7 @@ from omni.isaac.lab.sim import SimulationContext
 from go2_muscle_task.actuators import MuscleModel, ForwardEffortActuatorCfg
 from go2_muscle_task.asset.unitree import UNITREE_GO2_BODY_FIX_CFG
 from omni.isaac.lab.actuators import DCMotorCfg
+import pandas as pd
 
 
 import numpy as np
@@ -33,15 +34,15 @@ import numpy as np
 muscle_params = {
     "lmin":0.2,
     "lmax":2.0,
-    "fvmax": 0.8,
-    "fpmax": 1.76,
-    "lce_min": 0.45,
-    "lce_max": 0.9,
+    "fvmax": 1.8,
+    "fpmax": 2,
+    "lce_min": 0.75,
+    "lce_max": 0.93,
     "phi_min": -2.7227,
     "phi_max": -0.8,
     "vmax": 30.0, # TODO pierre fragen, ob das das ricthige ist (taken from unitre.py UNITREE_GO2_CFG)
-    "peak_force": 45.0,
-    "eps": 10e-5 # eps is just a smal number for numerical purpouses
+    "peak_force": 20.0,
+    "eps": 10e-6 # eps is just a smal number for numerical purpouses
 }
 
 def design_scene() -> tuple[dict, list[list[float]]]:
@@ -87,39 +88,44 @@ def run_simulator(sim: sim_utils.SimulationContext, entities: dict[str, Articula
     """Runs the simulation loop."""
     robot = entities["robot"]
     sim_dt = sim.get_physics_dt()
-    count = 0
+    count = 1
 
+    #fvmaxs = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
+    #i = 0
+
+    muscle_params["fvmax"] = 0.9
     muscle = MuscleModel(muscle_params, torch.zeros(1, 24, device="cuda:0"), 1, None)
 
-    pos = 0
-    acts = [0.1, 0.13, 0.15]
+    pos_log = []
 
     # Simulation loop
     while simulation_app.is_running():
-
-        #TODO output direct actuator forces
         if count % 500 == 0:
-            pos = (pos + 1) % 3
+            pd.DataFrame(pos_log).to_csv(f"free_running.csv", sep=";", header=None, index=False)
+            break
+            pos_log = []
+            count = 1
+            # i += 1
+            # muscle_params["fvmax"] = fvmaxs[i]
+            # muscle = MuscleModel(muscle_params, torch.zeros(1, 24, device="cuda:0"), 1, None)
+
+            # robot.write_joint_state_to_sim(robot.data.default_joint_pos.clone(), robot.data.default_joint_vel.clone())
 
         positions = torch.zeros(1, 12, device="cuda:0")
-        # keep the thighs at 0 
+        # keep the hip at 0 
         positions[0, 0:4] = 0
-        #put the shoulders a little bit back, so the calfs have room to move
+        #put the thighs a little bit back, so the calfs have room to move
         positions[0, 4:8] = 1.0
-        #positions[0, 8:] = -np.pi + count * 0.001
-        
+        #positions[0, 8:] = -1p.pi + count * 0.001 
         robot.set_joint_position_target(positions)
         #robot.write_joint_state_to_sim(positions, torch.zeros(1, 12, device="cuda:0"))
 
-
+        # joint position indexing
+        #[FL_HIP, FR_HIP, RL_HIP, RR_HIP, FL_THIGH, FR_THIGH, RL_THIGH, RR_THIGH, FL_CALF, FR_CALF, RL_CALF, RR_THIGH]
         activation = torch.zeros(1, 24, device="cuda:0") #only for calfs
-        activation[0, -1] = np.sin(count * 0.001) * 0.5 + 0.5 #acts[pos] #
+        activation[0, -1] = 0.20 #min((count) * 0.0001 + 0.15, 1.0) #np.sin(count * 0.001) * 0.5 + 0.5 #acts[pos] #
         activation[0, 11] = 0.1
-        print("activation: ", activation[0, -1])
-        # activation[0, 12] = np.sin(count * 0.001 + np.pi) * 0.5 + 0.5
-        # print("activation: ", activation[0, 12])
         effort = muscle.compute_torques(robot.data.joint_pos, robot.data.joint_vel, activation)
-        #effort = torch.zeros(1, 12, device="cuda:0")
         effort[0, 0:4] = 0
         effort[0, 4:8] = 0
 
@@ -138,6 +144,16 @@ def run_simulator(sim: sim_utils.SimulationContext, entities: dict[str, Articula
         count += 1
         # Update buffers
         robot.update(sim_dt)
+
+        pos_log.append(robot.data.joint_pos[0, -1].cpu().numpy())
+        #activation_log.append(activation[0, -1].cpu().numpy())
+
+
+    
+    
+    #pd.DataFrame(activation_log).to_csv(f"muscle_activation_activation_experiment.csv", sep=";", header=None, index=False)
+
+    print(len(pos_log))
 
 
 def main():

@@ -1,6 +1,7 @@
 import gymnasium as gym
 from .flat_terrain_muscle import Go2VelocityMuscleTaskCfg
 from .muscle_angle_task import MuscleAngleCfg, MuscleAngleCfg_PLAY
+from .hoppping_task import HoppingTaskCfg, HoppingTaskCfg_PLAY
 from .config import agents
 
 gym.register(
@@ -29,6 +30,26 @@ gym.register(
     disable_env_checker=True,
     kwargs={
         "env_cfg_entry_point": MuscleAngleCfg_PLAY,
+        "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:MuscleAngleRunnerCfg"
+    }
+)
+
+gym.register(
+    id="Hopping-Task", 
+    entry_point="omni.isaac.lab.envs:ManagerBasedRLEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": HoppingTaskCfg,
+        "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:MuscleAngleRunnerCfg"
+    }
+)
+
+gym.register(
+    id="Hopping-Task-Play", 
+    entry_point="omni.isaac.lab.envs:ManagerBasedRLEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": HoppingTaskCfg_PLAY,
         "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:MuscleAngleRunnerCfg"
     }
 )

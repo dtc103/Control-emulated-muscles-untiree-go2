@@ -11,5 +11,5 @@ class MuscleJointActionCfg(ActionTermCfg):
     scale: float | dict[str, float] = 1.0
     offset: float | dict[str, float] = 0.0
     preserve_order: bool = False
-    
+
     class_type = joint_actions.MuscleJointAction

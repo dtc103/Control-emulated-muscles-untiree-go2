@@ -27,6 +27,7 @@ def body_height(
 ) -> torch.Tensor:
     asset: Articulation = env.scene[asset_cfg.name]
     #print(asset.find_bodies("base")[0])
+    print(asset.data.joint_names)
     height = asset.data.root_pos_w[:, 2]
     #print(height)
     height_norm = torch.mean(height)
@@ -36,3 +37,7 @@ def body_height(
 
     return torch.exp(height_norm)
 
+def hop(env: ManagerBasedRLEnv, asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")):
+    asset: Articulation = env.scene[asset_cfg.name]
+    lin_vel = asset.data.root_lin_vel_b[:, 2]
+    return torch.sum(torch.clip(torch.exp(torch.clamp(lin_vel, min=0)), min = 0.0, max=10.0))

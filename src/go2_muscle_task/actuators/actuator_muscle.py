@@ -13,7 +13,8 @@ class MuscleModel:
     def __init__(self, muscle_params, action_tensor, nenvironments, options):
         super().__init__
         self.device = "cuda"
-        self.nactioncount = 24
+        print(nenvironments)
+        self.nactioncount = action_tensor.shape[1]
         self.nenvironments = nenvironments
 
         for k, v in muscle_params.items():
@@ -21,7 +22,7 @@ class MuscleModel:
 
         self.phi_min = (
             torch.ones(
-                (nenvironments, 12),
+                (nenvironments, action_tensor.shape[1] // 2),
                 dtype=torch.float32,
                 device=self.device,
                 requires_grad=False,
@@ -30,7 +31,7 @@ class MuscleModel:
         )
         self.phi_max = (
             torch.ones(
-                (nenvironments, 12),
+                (nenvironments, action_tensor.shape[1]// 2),
                 dtype=torch.float32,
                 device=self.device,
                 requires_grad=False,
@@ -62,13 +63,13 @@ class MuscleModel:
             requires_grad=False,
         )
         self.lce_1_tensor = torch.zeros(
-            (self.nenvironments, 12),
+            (self.nenvironments, action_tensor.shape[1]// 2),
             dtype=torch.float32,
             device=self.device,
             requires_grad=False,
         )
         self.lce_2_tensor = torch.zeros(
-            (self.nenvironments, 12),
+            (self.nenvironments, action_tensor.shape[1]// 2),
             dtype=torch.float32,
             device=self.device,
             requires_grad=False,
@@ -268,7 +269,6 @@ class MuscleModel:
         lce_tensor = self.lce_tensor
 
         FL = self.FL(lce_tensor)
-        print("FL: ", FL)
         FV = self.FV(lce_dot)
         FP = self.FP(lce_tensor)
 

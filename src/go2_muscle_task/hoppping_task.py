@@ -22,7 +22,7 @@ from omni.isaac.lab.utils.assets import ISAAC_NUCLEUS_DIR, ISAACLAB_NUCLEUS_DIR
 from omni.isaac.lab.utils.noise import AdditiveUniformNoiseCfg as Unoise
 
 import omni.isaac.lab_tasks.manager_based.locomotion.velocity.mdp as mdp
-from .mdp import track_joint_pos, body_height
+from .mdp import track_joint_pos, body_height, hop
 from .mdp.commands.commands_cfg import JointAngleCommandCfg
 from .actuators import ForwardEffortActuatorCfg
 
@@ -56,28 +56,6 @@ class MySceneCfg(InteractiveSceneCfg):
         ),
     )
 
-##
-# MDP settings
-##
-@configclass
-class CommandsCfg:
-    """Command specifications for the MDP."""
-    #command []
-    pose_command = JointAngleCommandCfg(
-        asset_name="robot",
-        resampling_time_range=(10.0, 10.0),
-        ranges=JointAngleCommandCfg.Ranges(joint_angles=[(-1.0471, 1.0471), (-1.0471, 1.0471), (-1.0471, 1.0471), (-1.0471, 1.0471), #set hip to 0
-                (-1.5708, 3.4907), (-1.5708, 3.4907), (-0.5236, 4.5378), (-0.5236, 4.5378), #thigh front, thigh back
-                (-math.pi, -0.8), (-math.pi, -0.8), (-math.pi, -0.8), (-math.pi, -0.8)]) #set calf to random (calf is always between 0 and math.pi)
-    )
-    # pose_command = JointAngleCommandCfg(
-    #     asset_name="robot",
-    #     resampling_time_range=(10.0, 10.0),
-    #     ranges=JointAngleCommandCfg.Ranges(joint_angles=[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), #set hip to 0
-    #             (-1.0, 1.0), (-1.0, 1.0), (-1.0, 1.0), (-1.0, 1.0), #thigh front, thigh back
-    #             (-1.5, 0.5), (-1.5, 0.5), (-1.5, 0.5), (-1.5, 0.5)]) #set calf to random (calf is always between 0 and math.pi)
-    # )
-
 
 @configclass
 class ActionsCfg:
@@ -100,10 +78,10 @@ class ObservationsCfg:
             func=mdp.projected_gravity,
             noise=Unoise(n_min=-0.05, n_max=0.05),
         )
-        velocity_commands = ObsTerm(func=mdp.generated_commands, params={"command_name": "pose_command"})
         joint_pos = ObsTerm(func=mdp.joint_pos_rel, noise=Unoise(n_min=-0.01, n_max=0.01))
         joint_vel = ObsTerm(func=mdp.joint_vel_rel, noise=Unoise(n_min=-1.5, n_max=1.5))
         actions = ObsTerm(func=mdp.last_action)
+        base_lin_vel = ObsTerm(func=mdp.base_pos_z)
 
         def __post_init__(self):
             self.enable_corruption = True
@@ -167,14 +145,22 @@ class RewardsCfg:
     #     params={"target_height": 0.4},
     #     weight=1.5
     # )
+    z_vel = RewTerm(
+        func=mdp.lin_vel_z_l2,
+        weight=1.0
+    )
+    hopping_task = RewTerm(
+        func=hop,
+        weight=1.0e-4
+    )
     #flat_orientation_l2 = RewTerm(func=mdp.flat_orientation_l2, weight=-1.5)
 
     # --task--
-    joint_pos = RewTerm(
-        func=track_joint_pos,
-        params={"command_name": "pose_command", "std": math.sqrt(4), "joint_names": ".*_(thigh|calf|hip)_joint"},
-        weight=2.0
-    )
+    # joint_pos = RewTerm(
+    #     func=track_joint_pos,
+    #     params={"command_name": "pose_command", "std": math.sqrt(4), "joint_names": ".*_(thigh|calf|hip)_joint"},
+    #     weight=2.0
+    # )
 
 
 @configclass
@@ -185,10 +171,10 @@ class TerminationsCfg:
 
     #joint_pos_exceeding = DoneTerm(func=mdp.joint_pos_out_of_manual_limit, params={"bounds": (-1.0, 1.0)})
 
-    # base_contact = DoneTerm(
-    #     func=mdp.root_height_below_minimum,
-    #     params={"minimum_height": 0.1},
-    # )
+    base_contact = DoneTerm(
+        func=mdp.root_height_below_minimum,
+        params={"minimum_height": 0.1},
+    )
 
 ##
 # Environment configuration
@@ -196,7 +182,7 @@ class TerminationsCfg:
 
 
 @configclass
-class MuscleAngleCfg(ManagerBasedRLEnvCfg):
+class HoppingTaskCfg(ManagerBasedRLEnvCfg):
     """Configuration for the locomotion velocity-tracking environment."""
 
     # Scene settings
@@ -204,7 +190,6 @@ class MuscleAngleCfg(ManagerBasedRLEnvCfg):
     # Basic settings
     observations: ObservationsCfg = ObservationsCfg()
     actions: ActionsCfg = ActionsCfg()
-    commands: CommandsCfg = CommandsCfg()
     # MDP settings
     rewards: RewardsCfg = RewardsCfg()
     terminations: TerminationsCfg = TerminationsCfg()
@@ -214,7 +199,7 @@ class MuscleAngleCfg(ManagerBasedRLEnvCfg):
         """Post initialization."""
         # general settings
         self.decimation = 4
-        self.episode_length_s = 10.0
+        self.episode_length_s = 20.0
         # simulation settings
         self.sim.dt = 0.005
         self.sim.render_interval = self.decimation
@@ -231,13 +216,13 @@ class MuscleAngleCfg(ManagerBasedRLEnvCfg):
                 friction=0.0,
             ),
         }
-        self.scene.robot.spawn.articulation_props.fix_root_link = True
+        self.scene.robot.spawn.articulation_props.fix_root_link = False
 
         print("INIT TRAIN ENV AHHHHHHHHHHHHHHHHH")
 
 
 @configclass
-class MuscleAngleCfg_PLAY(ManagerBasedRLEnvCfg):
+class HoppingTaskCfg_PLAY(ManagerBasedRLEnvCfg):
     """Configuration for the locomotion velocity-tracking environment."""
 
     # Scene settings
@@ -245,7 +230,6 @@ class MuscleAngleCfg_PLAY(ManagerBasedRLEnvCfg):
     # Basic settings
     observations: ObservationsCfg = ObservationsCfg()
     actions: ActionsCfg = ActionsCfg()
-    commands: CommandsCfg = CommandsCfg()
     # MDP settings
     rewards: RewardsCfg = RewardsCfg()
     terminations: TerminationsCfg = TerminationsCfg()
@@ -257,7 +241,7 @@ class MuscleAngleCfg_PLAY(ManagerBasedRLEnvCfg):
         self.scene.num_envs = 50
         self.scene.env_spacing = 2.5
         self.decimation = 4
-        self.episode_length_s = 10.0
+        self.episode_length_s = 20.0
         # simulation settings
         self.sim.dt = 0.005
         self.sim.render_interval = self.decimation
@@ -277,9 +261,7 @@ class MuscleAngleCfg_PLAY(ManagerBasedRLEnvCfg):
                 friction=0.0,
             ),
         }
-        self.scene.robot.spawn.articulation_props.fix_root_link = True
-
-        self.commands.pose_command.resampling_time_range=(2.0, 2.0)
+        self.scene.robot.spawn.articulation_props.fix_root_link = False
 
         print("INIT PLAY ENV AHHHHHHHHHHHHHHHHHHHHH")
 

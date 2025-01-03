@@ -113,12 +113,14 @@ def main():
     )
 
     import numpy as np
-    #joint_pos = []
-    #joint_vel = []
+    joint_command = []
+    joint_pos = []
 
     # reset environment
     obs, _ = env.get_observations()
     timestep = 0
+
+    print("STARTING")
     # simulate environment
     while simulation_app.is_running():
         # run everything in inference mode
@@ -128,11 +130,9 @@ def main():
             # env stepping
             obs, _, _, _ = env.step(actions)
 
-            #pos = obs[:, 12:24]
-            #vel = obs[:, 24:36]
-
-            #joint_pos.append(pos)
-            #joint_vel.append(vel)
+            pos = obs[:, 3 + 12: 3 + 12 + 12]
+            joint_command.append(obs[:, 3:3 + 12])
+            joint_pos.append(pos)
 
         if args_cli.video:
             timestep += 1
@@ -140,13 +140,15 @@ def main():
             if timestep == args_cli.video_length:
                 break
 
-    #result_pos = torch.cat(joint_pos)
-    #result_vel = torch.cat(joint_vel)
+    result_pos = torch.cat(joint_pos)
+    result_comm = torch.cat(joint_command)
 
-    #import pandas as pd
+    import pandas as pd
     
-    #pd.DataFrame(result_pos.cpu().numpy()).to_csv("joint_pos.csv", sep=";", header=None, index=False)
-    #pd.DataFrame(result_vel.cpu().numpy()).to_csv("joint_vel.csv", sep=";", header=None, index=False)
+    pd.DataFrame(result_pos.cpu().numpy()).to_csv("joint_pos_torque_follow.csv", sep=";", header=None, index=False)
+    pd.DataFrame(result_comm.cpu().numpy()).to_csv("joint_comm_torque_follow.csv", sep=";", header=None, index=False)
+
+    print("WRITINTG")
 
 
     # close the simulator
